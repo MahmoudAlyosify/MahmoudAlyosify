@@ -19,7 +19,7 @@ Here are some ideas to get you started:
 ## About Me:
   <b> Name: </b> Mahmoud Sayed Youssef </br>
   <b> Job Title: </b> Instructor at Udemy for “Discrete Mathematics for Computer science in Arabic course“ Bioinformatics Student at Faculty of Computers and Information, Assiut University </br>
-  <b>My Resume: <a href="https://mahmoudalyosify.github.io/Files/CV.html">RESUME</a></b>
+  <b>My Resume: <a href="https://mahmoudalyosify.github.io/Files/CV.html" target="_blank">RESUME</a></b>
   </br>
 
-📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://www.linkedin.com/in/mahmoudalyosify/" target=_blank><b>LinkedIn</b></a> | <a href="https://mahmoudalyosify.github.io/"><b>My Website</b></a>
+📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://www.linkedin.com/in/mahmoudalyosify/" target="_blank"><b>LinkedIn</b></a> | <a href="https://mahmoudalyosify.github.io/" target="_blank"><b>My Website</b></a>
