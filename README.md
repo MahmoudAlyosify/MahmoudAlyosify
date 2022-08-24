@@ -22,4 +22,4 @@ Here are some ideas to get you started:
   <b>My Resume: <a href="https://mahmoudalyosify.github.io/Files/CV.html">RESUME</a></b>
   </br>
 
-📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://www.linkedin.com/in/mahmoudalyosify/"><b>LinkedIn</b></a> | <a href="https://mahmoudalyosify.github.io/"><b>My Website</b></a>
+📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://www.linkedin.com/in/mahmoudalyosify/" target=_blank><b>LinkedIn</b></a> | <a href="https://mahmoudalyosify.github.io/"><b>My Website</b></a>
