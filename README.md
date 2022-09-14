@@ -19,7 +19,7 @@ Here are some ideas to get you started:
 ## About Me:
   <b> Name: </b> Mahmoud Sayed Youssef </br>
   <b> Job Title: </b> Instructor at Udemy | Youtube Content Creator | Junior .NET Developer | Bioinformatics Student at Faculty of Computers and Information, Assiut University </br>
-  <b>My Resume: <a href="https://github.com/MahmoudAlyosifySite/MahmoudAlyosifySite.github.io/blob/main/Files/Mahmoud%20Sayed%20Youssef%20CV%202021.pdf" target="_blank">RESUME</a></b>
+  <b>My Resume: <a href="https://drive.google.com/file/d/1JdoLxZfMKKn4tmMa2yqSGEtwu9UvA2QE/view" target="_blank">RESUME</a></b>
   </br>
 
 📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://www.linkedin.com/in/mahmoudalyosify/" target="_blank"><b>LinkedIn</b></a> | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
