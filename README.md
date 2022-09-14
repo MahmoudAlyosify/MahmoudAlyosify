@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 
 ## About Me:
   <b> Name: </b> Mahmoud Sayed Youssef </br>
-  <b> Job Title: </b> Instructor at Udemy for “Discrete Mathematics for Computer science in Arabic course“ Bioinformatics Student at Faculty of Computers and Information, Assiut University </br>
+  <b> Job Title: </b> Instructor at Udemy | Youtube Content Creator | Junior .NET Developer | Bioinformatics Student at Faculty of Computers and Information, Assiut University </br>
   <b>My Resume: <a href="https://mahmoudalyosify.github.io/Files/CV.html" target="_blank">RESUME</a></b>
   </br>
 
