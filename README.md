@@ -34,7 +34,8 @@ Languages
 
 Database
 -----
-[![My Skills](https://skills.thijs.gg/icons?i=sql,mysql,mongo)](https://skills.thijs.gg)
+SQL
+[![My Skills](https://skills.thijs.gg/icons?i=mysql,mongo)](https://skills.thijs.gg)
 
 
 # Watch my contribution graph get eaten by the Snake🐍
