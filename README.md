@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 
 Quotes
 -----
-> “Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” - `Albert Einstein`
+> “Imagination is more important than knowledge.<hr> Knowledge is limited.<hr> Imagination encircles the world.” - `Albert Einstein`
 
 Languages
 -----
