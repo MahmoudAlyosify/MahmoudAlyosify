@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 
 Quotes
 -----
-> “Imagination is more important than knowledge.</br>
+> “Imagination is more important than knowledge.<br />
  Knowledge is limited.</br>
  Imagination encircles the world.” - `Albert Einstein`
 
@@ -45,7 +45,7 @@ Connect with me
 [<img align="left" width="22px" src="https://www.svgrepo.com/show/157006/linkedin.svg" />][linkedin]
 [<img align="left" width="22px" src="https://www.svgrepo.com/show/349563/whatsapp.svg" />][whatsapp]
 [<img align="left" width="22px" src="https://www.svgrepo.com/show/157810/facebook.svg" />][facebook]
-[<img align="left" width="22px" src="https://user-images.githubusercontent.com/59246305/190517045-04179323-82d2-4b65-889d-752e92bd1626.png" />][My_Website]
+[<img align="left" width="25px" src="https://user-images.githubusercontent.com/59246305/190517045-04179323-82d2-4b65-889d-752e92bd1626.png" />][My_Website]
 </br>
 
 [facebook]: https://www.facebook.com/MahmoudAlyosify/
