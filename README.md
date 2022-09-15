@@ -34,8 +34,9 @@ Languages
 
 Database
 -----
-<img src="https://user-images.githubusercontent.com/59246305/190514074-c3e63224-20aa-4a78-aa51-23b5504650ae.svg" style="width: 100px; height: 100px;">
 [![My Skills](https://skills.thijs.gg/icons?i=mysql,mongo)](https://skills.thijs.gg)
+<img src="https://user-images.githubusercontent.com/59246305/190514074-c3e63224-20aa-4a78-aa51-23b5504650ae.svg" style="width: 100px; height: 100px;">
+
 
 
 # Watch my contribution graph get eaten by the Snake🐍
