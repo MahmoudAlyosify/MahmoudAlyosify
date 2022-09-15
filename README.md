@@ -28,6 +28,9 @@ Quotes
 -----
 > Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations - `Steve Jobs`
 
+Languages
+-----
+[![My Skills](https://skills.thijs.gg/icons?i=c,cpp,cs,r,py,js,html,css,mlx,java,dart)](https://skills.thijs.gg)
 
 # Watch my contribution graph get eaten by the Snake🐍
 ![snake gif](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg)
