@@ -23,6 +23,12 @@ Here are some ideas to get you started:
   </br>
 
 📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://www.linkedin.com/in/mahmoudalyosify/" target="_blank"><b>LinkedIn</b></a> | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
+
+Quotes
+-----
+> Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations - `Steve Jobs`
+
+
 # Watch my contribution graph get eaten by the Snake🐍
 ![snake gif](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg)
 
