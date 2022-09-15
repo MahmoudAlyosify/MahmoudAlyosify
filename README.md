@@ -22,13 +22,13 @@ Here are some ideas to get you started:
   <b>My Resume: <a href="https://drive.google.com/file/d/1JdoLxZfMKKn4tmMa2yqSGEtwu9UvA2QE/view" target="_blank">RESUME</a></b>
   </br>
 
-📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://www.linkedin.com/in/mahmoudalyosify/" target="_blank"><b>LinkedIn</b></a> | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
+📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
 
 Quotes
 -----
 > “Imagination is more important than knowledge.<br />
-Knowledge is limited.<br />
-Imagination encircles the world.” - `Albert Einstein`
+ Knowledge is limited.<br />
+ Imagination encircles the world.” - `Albert Einstein`
 
 Languages
 -----
