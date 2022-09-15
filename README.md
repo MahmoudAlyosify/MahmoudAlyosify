@@ -37,7 +37,17 @@ Database
 [![My Skills](https://skills.thijs.gg/icons?i=mysql,mongo)](https://skills.thijs.gg)
 <img src="https://user-images.githubusercontent.com/59246305/190514074-c3e63224-20aa-4a78-aa51-23b5504650ae.svg" style="width: 50px; height: 45px;">
 
+Connect with me 
+-----------------------------------------------------
+[<img align="left" width="22px" src="https://www.svgrepo.com/show/157006/linkedin.svg" />][linkedin]
+[<img align="left" width="22px" src="https://www.svgrepo.com/show/349563/whatsapp.svg" />][whatsapp]
+[<img align="left" width="22px" src="https://www.svgrepo.com/show/157810/facebook.svg" />][facebook]
 
+</br>
+
+[facebook]: https://www.facebook.com/MahmoudAlyosify/
+[linkedin]: https://www.linkedin.com/in/mahmoudalyosify/
+[whatsapp]: https://wa.me/+201145557959
 
 # Watch my contribution graph get eaten by the Snake🐍
 ![snake gif](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg)
