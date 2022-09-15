@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 
 Quotes
 -----
-> Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations - `Steve Jobs`
+> “Be yourself; everyone else is already taken.” - `Oscar Wilde`
 
 Languages
 -----
