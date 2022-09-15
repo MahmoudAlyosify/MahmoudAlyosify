@@ -30,11 +30,11 @@ Quotes
 
 Languages
 -----
-[![My Skills](https://skills.thijs.gg/icons?i=c,cpp,cs,r,py,js,html5,css,matlab,java,dart)](https://skills.thijs.gg)
+[![My Skills](https://skills.thijs.gg/icons?i=c,cpp,cs,r,py,js,html,css,matlab,java,dart)](https://skills.thijs.gg)
 
 Database
 -----
-[![My Skills](https://skills.thijs.gg/icons?i=sql,mysql,MongoDB)](https://skills.thijs.gg)
+[![My Skills](https://skills.thijs.gg/icons?i=SQL,mysql,mongo)](https://skills.thijs.gg)
 
 
 # Watch my contribution graph get eaten by the Snake🐍
