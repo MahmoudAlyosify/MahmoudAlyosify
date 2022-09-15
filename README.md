@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 
 Quotes
 -----
-> “Be yourself; everyone else is already taken.” - `Oscar Wilde`
+> “Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” - `Albert Einstein`
 
 Languages
 -----
