@@ -46,11 +46,17 @@ Connect with me
 [<img align="left" width="25px" src="https://user-images.githubusercontent.com/59246305/190517045-04179323-82d2-4b65-889d-752e92bd1626.png" />][My_Website]
 </br>
 
+
+<img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="500" height="3">
+
+<img src="https://github-readme-stats.vercel.app/api?username=MahmoudAlyosify&show_icons=true&locale=en&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" alt="a7mdlbanna" align="left"/> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=a7mdlbanna&show_icons=true&locale=en&layout=compact&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" alt="a7mdlbanna"/>
+
+
+
 [facebook]: https://www.facebook.com/MahmoudAlyosify/
 [linkedin]: https://www.linkedin.com/in/mahmoudalyosify/
 [whatsapp]: https://wa.me/+201145557959
 [My_Website]: https://mahmoudalyosifysite.github.io/
 # Watch my contribution graph get eaten by the Snake🐍
 ![snake gif](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg)
-
 
