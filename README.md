@@ -32,11 +32,6 @@ Languages
 -----
 [![My Skills](https://skills.thijs.gg/icons?i=c,cpp,cs,r,py,js,html,css,matlab,java,dart)](https://skills.thijs.gg)
 
-Database
------
-[![My Skills](https://skills.thijs.gg/icons?i=mysql,mongo)](https://skills.thijs.gg)
-<img src="https://user-images.githubusercontent.com/59246305/190514074-c3e63224-20aa-4a78-aa51-23b5504650ae.svg" style="width: 50px; height: 45px;">
-
 
 Connect with me 
 -----------------------------------------------------
