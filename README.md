@@ -60,3 +60,4 @@ Connect with me
 # Watch my contribution graph get eaten by the Snake🐍
 ![snake gif](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg)
 
+<img src="https://github-profile-trophy.vercel.app/?username=MahmoudAlyosify&row=1&column=6" alt="Mahmoud" />
