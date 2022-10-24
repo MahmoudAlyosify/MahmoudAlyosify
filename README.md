@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 # Welcome to my profile 👋 I'm Mahmoud Alyosify 😄
 <p align="center">
   <a href="https://github.com/MahmoudAlyosify/github-widgetbox">
-    <img width="100%" height="70%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
+    <img width="60%" height="50%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
   </a>
 </p>
 ## About Me:
