@@ -20,7 +20,6 @@ Here are some ideas to get you started:
     <img width="60%" height="50%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
   </a>
 </p>
-# About Me:
 
   <b> Name: </b> Mahmoud Sayed Youssef </br>
   <b> Job Title: </b> Instructor at Udemy | Youtube Content Creator | Junior .NET Developer | Bioinformatics Student at Faculty of Computers and Information, Assiut University </br>
