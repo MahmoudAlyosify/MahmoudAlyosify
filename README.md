@@ -52,7 +52,7 @@ Connect with me
 [My_Website]: https://mahmoudalyosifysite.github.io/
 
 <img src="https://github-readme-stats.vercel.app/api?username=MahmoudAlyosify&show_icons=true&locale=en&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" alt="MahmoudAlyosify" align="left"/> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MahmoudAlyosify&show_icons=true&locale=en&layout=compact&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" alt="MahmoudAlyosify"/>
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mahmoudalyosify&" alt="mahmoudalyosify" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=MahmoudAlyosify&" alt="MahmoudAlyosify" /></p>
 <img align="center" src="https://github-profile-trophy.vercel.app/?username=MahmoudAlyosify&row=1&column=6" alt="Mahmoud" />
 <img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
 
