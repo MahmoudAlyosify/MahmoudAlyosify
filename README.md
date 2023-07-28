@@ -34,7 +34,7 @@ Quotes
 
 Languages
 -----
-[![My Skills](https://skills.thijs.gg/icons?i=c,cpp,cs,r,py,js,html,css,matlab,java,dart)](https://skills.thijs.gg)
+[![My Skills](https://skills.thijs.gg/icons?i=c,cpp,cs,r,py,js,html,css,java)](https://skills.thijs.gg)
 
 
 Connect with me 
