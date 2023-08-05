@@ -20,10 +20,10 @@ Here are some ideas to get you started:
     <img width="60%" height="50%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
   </a>
 </p>
+---
 ### :man_technologist: About Me :
-I am a Back End Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Egypt.
   <b> Name: </b> Mahmoud Sayed Youssef </br>
-
+I am a Back End Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Egypt.
 - :telescope: I graduated from ITI (Information Technology Institute) Track Professinal Web & BI
 
 - :seedling: I’m currently learning **Angular & Clean architecture**
@@ -34,7 +34,7 @@ I am a Back End Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTG
   </br>
 
 📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
-
+---
 Quotes
 -----
 > “Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” - `Albert Einstein ♥️`
