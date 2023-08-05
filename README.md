@@ -25,11 +25,11 @@ Here are some ideas to get you started:
 ### :man_technologist: About Me :  
 
 <b> Name: </b> Mahmoud Sayed Youssef </br>
-I am a Probabilistic ML | Software Developer(.NET&Angular)  <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> | Bioinformatics Fresh Graduated
+I am a Software Developer(.NET&Angular)  <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> | Bioinformatics Fresh Graduated
 
 - :telescope: I graduated from Faculty of Computers and Information (Bioinformatics), Assuit University
 
-- :seedling: I’m currently learning **Angular & Clean architecture**
+- :seedling: I’m currently learning **Angular & Clean architecture & Probabilistic ML**
 
 - :zap: In my free time, I solve problems on LeetCode and read tech articles.
 
