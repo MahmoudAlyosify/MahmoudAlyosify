@@ -75,6 +75,8 @@ Connect with me
 [My_Website]: https://mahmoudalyosifysite.github.io/
 
 <img src="https://github-readme-stats.vercel.app/api?username=MahmoudAlyosify&show_icons=true&locale=en&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" alt="MahmoudAlyosify" align="left"/> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MahmoudAlyosify&show_icons=true&locale=en&layout=compact&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" alt="MahmoudAlyosify"/>
+
+-----
 ### :fire: My Stats :
 
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Mona400&theme=neon-dark)](https://git.io/streak-stats)
