@@ -21,32 +21,21 @@ Here are some ideas to get you started:
   </a>
 </p>
 ---
-
-### :man_technologist: About Me :
-I am a Back End Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Egypt.
-
-- :telescope: I graduated from ITI (Information Technology Institute) Track Professinal Web & BI
-
-- :seedling: I’m currently learning **Angular & Clean architecture**
-
-- :zap: In my free time, I solve problems on LeetCode and read tech articles.
-
-- :mailbox:How to reach me:[![Linkedin Badge](https://img.shields.io/badge/-Mona-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudalyosify/)  OR  **mahmoudalyosify@gmail.com** 
-
----
 ### :man_technologist: About Me :
   <b> Name: </b> Mahmoud Sayed Youssef </br>
 I am a Back End Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Egypt.
-- :telescope: I graduated from ITI (Information Technology Institute) Track Professinal Web & BI
+
+- :telescope: I graduated from Faculty of Computers and Information (Bioinformatics), Assuit University
 
 - :seedling: I’m currently learning **Angular & Clean architecture**
 
 - :zap: In my free time, I solve problems on LeetCode and read tech articles.
 
+- :mailbox:How to reach me:[![Linkedin Badge](https://img.shields.io/badge/-Mahmoud-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudalyosify/)  |  **mahmoudalyosify@gmail.com** | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
+
   <b>My Resume: <a href="https://drive.google.com/file/d/1JdoLxZfMKKn4tmMa2yqSGEtwu9UvA2QE/view" target="_blank">RESUME</a></b>
   </br>
-
-📫 How to reach me: mahmoudalyosify@gmail.com | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
+  
 ---
 Quotes
 -----
