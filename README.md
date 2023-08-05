@@ -22,28 +22,32 @@ Here are some ideas to get you started:
 </p>
 
 ---
-### :man_technologist: About Me :  
+
+### :man_technologist: About Me :
 
 <b> Name: </b> Mahmoud Sayed Youssef </br>
-I am a Software Developer(.NET&Angular)  <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> | Bioinformatics Fresh Graduated
+I am a Software Developer (.NET & Angular) <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> | Bioinformatics Fresh Graduate
 
-- :telescope: I graduated from Faculty of Computers and Information (Bioinformatics), Assuit University
+- :telescope: I graduated from the Faculty of Computers and Information (Bioinformatics), Assuit University.
 
-- :seedling: I’m currently learning **Angular & Clean architecture & Probabilistic ML**
+- :seedling: I’m currently learning **Angular, Clean Architecture, and Probabilistic ML**.
 
-- :zap: In my free time, I solve problems on LeetCode and read tech articles.
+- :zap: In my free time, I enjoy solving problems on LeetCode and reading tech articles.
 
-- :mailbox:How to reach me:  [![Linkedin Badge](https://img.shields.io/badge/-Mahmoud-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudalyosify/)  |  **mahmoudalyosify@gmail.com** | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
+- :mailbox: How to reach me:  [![Linkedin Badge](https://img.shields.io/badge/-Mahmoud-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudalyosify/)  |  **mahmoudalyosify@gmail.com** | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
 
-  
 ---
-Quotes
------
+
+#### Quotes:
+
 > “Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” - `Albert Einstein ♥️`
------
+
+---
+
 ### :hammer_and_wrench: Languages and Tools :
 
 [![My Skills](https://skills.thijs.gg/icons?i=c,cpp,cs,r,pyjava)](https://skills.thijs.gg)
+
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScript" alt="TypeScript" width="50" height="50"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="50" height="50"/>&nbsp;
@@ -59,15 +63,14 @@ Quotes
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="50" height="50"/>
 </div>
 
------
-Connect with me 
------------------------------------------------------
+---
+
+### Connect with me:
 [<img align="left" width="22px" src="https://www.svgrepo.com/show/157006/linkedin.svg" />][linkedin]
 [<img align="left" width="22px" src="https://www.svgrepo.com/show/349563/whatsapp.svg" />][whatsapp]
 [<img align="left" width="22px" src="https://www.svgrepo.com/show/157810/facebook.svg" />][facebook]
 [<img align="left" width="25px" src="https://user-images.githubusercontent.com/59246305/190517045-04179323-82d2-4b65-889d-752e92bd1626.png" />][My_Website]
 </br>
-
 
 [facebook]: https://www.facebook.com/MahmoudAlyosify/
 [linkedin]: https://www.linkedin.com/in/mahmoudalyosify/
@@ -79,13 +82,11 @@ Connect with me
 <img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
 
 ### :fire: My Stats :
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Mona400&theme=neon-dark)](https://git.io/streak-stats)
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=MahmoudAlyosify&theme=neon-dark)](https://git.io/streak-stats)
 -----------------------------------------------------
 <img align="center" src="https://github-profile-trophy.vercel.app/?username=MahmoudAlyosify&row=1&column=6" alt="Mahmoud" />
 <img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
 
-
-# Watch my contribution graph get eaten by the Snake🐍
-![snake gif](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg)
-
+# Watch my contribution graph get eaten by the Snake 🐍
+![snake gif](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg?raw=true)
 
