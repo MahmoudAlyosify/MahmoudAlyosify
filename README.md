@@ -33,7 +33,7 @@ I am a Software Developer(.NET&Angular)  <img src="https://media.giphy.com/media
 
 - :zap: In my free time, I solve problems on LeetCode and read tech articles.
 
-- :mailbox:How to reach me:[![Linkedin Badge](https://img.shields.io/badge/-Mahmoud-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudalyosify/)  |  **mahmoudalyosify@gmail.com** | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
+- :mailbox:How to reach me:  [![Linkedin Badge](https://img.shields.io/badge/-Mahmoud-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudalyosify/)  |  **mahmoudalyosify@gmail.com** | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
 
   
 ---
