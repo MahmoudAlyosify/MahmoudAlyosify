@@ -25,7 +25,7 @@ Here are some ideas to get you started:
 ### :man_technologist: About Me :  
 
 <b> Name: </b> Mahmoud Sayed Youssef </br>
-I am a Probabilistic ML | Software Developer(.NET&Angular) | Bioinformatics Fresh Graduated <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Egypt.
+I am a Probabilistic ML | Software Developer(.NET&Angular)  <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> | Bioinformatics Fresh Graduated
 
 - :telescope: I graduated from Faculty of Computers and Information (Bioinformatics), Assuit University
 
