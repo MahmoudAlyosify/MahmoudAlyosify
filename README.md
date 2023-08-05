@@ -60,7 +60,7 @@ Quotes
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="50" height="50"/>
 </div>
 
-
+-----
 Connect with me 
 -----------------------------------------------------
 [<img align="left" width="22px" src="https://www.svgrepo.com/show/157006/linkedin.svg" />][linkedin]
