@@ -20,9 +20,16 @@ Here are some ideas to get you started:
     <img width="60%" height="50%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
   </a>
 </p>
-
+### :man_technologist: About Me :
+I am a Back End Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Egypt.
   <b> Name: </b> Mahmoud Sayed Youssef </br>
-  <b> Job Title: </b> Instructor at Udemy | Youtube Content Creator | Junior .NET Developer | Bioinformatics Student at Faculty of Computers and Information, Assiut University </br>
+
+- :telescope: I graduated from ITI (Information Technology Institute) Track Professinal Web & BI
+
+- :seedling: I’m currently learning **Angular & Clean architecture**
+
+- :zap: In my free time, I solve problems on LeetCode and read tech articles.
+
   <b>My Resume: <a href="https://drive.google.com/file/d/1JdoLxZfMKKn4tmMa2yqSGEtwu9UvA2QE/view" target="_blank">RESUME</a></b>
   </br>
 
