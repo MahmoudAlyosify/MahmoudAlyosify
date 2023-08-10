@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 ### :man_technologist: About Me :
 
 <b> Name: </b> Mahmoud Sayed Youssef </br>
-I am a Passion for Probabilistic ML | Software Engineer(.NET&Angular) <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> with a Passion for Performance | Instructor at Udemy | Bioinformatics Fresh Graduated
+I am a Passion for Probabilistic ML | Software Engineer (.NET&Angular) <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> with a Passion for Performance | Instructor at Udemy | Bioinformatics Fresh Graduated
 
 - :telescope: I graduated from the Faculty of Computers and Information (Bioinformatics), Assuit University.
 
