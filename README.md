@@ -30,7 +30,7 @@ I am a Passion for Artificial general intelligence (AGI) | Software Engineer wit
 
 - :telescope: I graduated from the Faculty of Computers and Information (Bioinformatics), Assuit University.
 
-- :seedling: I’m currently learning **Angular, Clean Architecture, and Probabilistic ML**.
+- :seedling: I’m currently learning **Probabilistic ML, Clean Architecture, and Angular**.
 
 - :zap: In my free time, I enjoy solving problems on LeetCode and reading tech articles.
 
