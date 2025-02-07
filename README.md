@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-# Welcome to my profile 👋 I'm Mahmoud Alyosify 😄
+# Welcome to my profile 👋 I'm Mahmoud Alyosify 👀
 <p align="center">
   <a href="https://github.com/MahmoudAlyosify/github-widgetbox">
     <img width="60%" height="50%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 ### :man_technologist: About Me :
 
 <b> Name: </b> Mahmoud Sayed Youssef </br>
-I am a Passion for Probabilistic ML | Software Engineer (.NET&Angular) <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> with a Passion for Performance | Instructor at Udemy | Bioinformatics Fresh Graduated
+I am a Passion for Artificial general intelligence (AGI) | Software Engineer with expertise in ML and (.NET&Angular) <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> with a Passion for Performance | Instructor at Udemy | Bioinformatics Fresh Graduated
 
 - :telescope: I graduated from the Faculty of Computers and Information (Bioinformatics), Assuit University.
 
