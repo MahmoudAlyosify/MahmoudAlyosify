@@ -90,3 +90,4 @@ I am a Passion for Artificial general intelligence (AGI) | Software Engineer wit
 # Watch my contribution graph get eaten by the Snake 🐍
 ![snake gif](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg?raw=true)
 
+<img src="https://tryhackme-badges.s3.amazonaws.com/mahmoudalyosify.png" alt="Your Image Badge" />
