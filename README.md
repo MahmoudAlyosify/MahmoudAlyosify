@@ -100,6 +100,15 @@ I am a Passion for Artificial general intelligence (AGI) | Software Engineer wit
 ![Snake animation](https://raw.githubusercontent.com/MahmoudAlyosify/MahmoudAlyosify/output/github-contribution-grid-snake.svg)
 
 
+### My GitHub Contribution Snake
+
+#### SVG version (auto-updating, static)
+
+![Snake animation](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.svg)
+
+#### GIF version (auto-updating, animated)
+
+<img src="https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/github-contribution-grid-snake.gif" width="100%" />
 
 
 
