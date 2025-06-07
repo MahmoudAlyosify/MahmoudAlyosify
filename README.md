@@ -97,7 +97,7 @@ I am a Passion for Artificial general intelligence (AGI) | Software Engineer wit
 <img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
 
 # Watch my contribution graph get eaten by the Snake 🐍
-![Snake animation](https://raw.githubusercontent.com/MahmoudAlyosify/MahmoudAlyosify/dist/github-contribution-grid-snake.svg)
+![snake animation](https://github.com/MahmoudAlyosify/MahmoudAlyosify/blob/output/dist/github-contribution-grid-snake.svg)
 
 
 
