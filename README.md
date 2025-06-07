@@ -55,7 +55,7 @@ I am a Passion for Artificial general intelligence (AGI) | Software Engineer wit
 
 ### :hammer_and_wrench: Languages and Tools :
 
-[![My Skills](https://skills.thijs.gg/icons?i=c,cpp,cs,r,pyjava)](https://skills.thijs.gg)
+
 
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScript" alt="TypeScript" width="50" height="50"/>&nbsp;
