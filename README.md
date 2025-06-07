@@ -15,6 +15,14 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 # Welcome to my profile 👋 I'm Mahmoud Alyosify 👀
+
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Mahmoud+Alyosify!;" />
+</h1>
+
+<p align="right">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=MahmoudAlyosify.MahmoudAlyosify" />
+</p>
 <p align="center">
   <a href="https://github.com/MahmoudAlyosify/github-widgetbox">
     <img width="60%" height="50%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
