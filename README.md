@@ -91,7 +91,6 @@ I am a Passion for Artificial general intelligence (AGI) | Software Engineer wit
 -----------------------------------------------------
 <img align="center" src="https://github-profile-trophy.vercel.app/?username=MahmoudAlyosify&row=1&column=6" alt="Mahmoud" />
 <img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
-<img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
 
 # Watch my contribution graph
 
@@ -106,6 +105,7 @@ I am a Passion for Artificial general intelligence (AGI) | Software Engineer wit
 
 
 
+<img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
 
 
 
