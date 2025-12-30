@@ -14,16 +14,23 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+
+<!--
+**MahmoudAlyosify/MahmoudAlyosify** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+-->
+
 # Welcome to my profile 👋 I'm Mahmoud Alyosify 👀
 
 <h1 align="center">
 <img src="https://readme-typing-svg.herokuapp.com/?font=Roboto+Mono&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Mahmoud+Alyosify!" />
-
 </h1>
 
 <p align="right">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=MahmoudAlyosify.MahmoudAlyosify" />
 </p>
+
 <p align="center">
   <a href="https://github.com/MahmoudAlyosify/github-widgetbox">
     <img width="60%" height="50%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
@@ -34,43 +41,67 @@ Here are some ideas to get you started:
 
 ### :man_technologist: About Me :
 
-<b> Name: </b> Mahmoud Sayed Youssef </br>
-I am a Passion for Artificial general intelligence (AGI) | Software Engineer with expertise in ML and (.NET&Angular) <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> with a Passion for Performance | Instructor at Udemy | Bioinformatics Fresh Graduated
+<b>Name:</b> Mahmoud Sayed Youssef </br>
+Passionate about **Artificial General Intelligence (AGI)** | Software Engineer with expertise in **Machine Learning & (.NET / Angular)**  
+<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">  
+Instructor at **Udemy** | **Bioinformatics Graduate**
 
-- :telescope: I graduated from the Faculty of Computers and Information (Bioinformatics), Assuit University.
-
-- :seedling: I’m currently learning **Probabilistic ML, Clean Architecture, and Angular**.
-
-- :zap: In my free time, I enjoy solving problems on LeetCode and reading tech articles.
-
-- :mailbox: How to reach me:  [![Linkedin Badge](https://img.shields.io/badge/-Mahmoud-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudalyosify/)  |  **mahmoudalyosify@gmail.com** | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
+- :telescope: Graduated from the Faculty of Computers and Information (Bioinformatics), Assuit University.
+- :seedling: Currently learning **Probabilistic ML, Clean Architecture, and Angular**.
+- :zap: Enjoy solving problems on **LeetCode** and reading tech articles.
+- :mailbox: How to reach me:  
+  [![Linkedin Badge](https://img.shields.io/badge/-Mahmoud-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudalyosify/)  
+  **mahmoudalyosify@gmail.com** | <a href="https://mahmoudalyosifysite.github.io/" target="_blank"><b>My Website</b></a>
 
 ---
 
 #### Quotes:
-
-> “Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” - `Albert Einstein ♥️`
+> “Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.”  
+— `Albert Einstein ♥️`
 
 ---
 
 ### :hammer_and_wrench: Languages and Tools :
 
-
-
 <div>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScript" alt="TypeScript" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg"  title="CSS3" alt="CSS" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" title="AngularJS" alt="AngularJS" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/dotnetcore/dotnetcore-original.svg" title=".NET Core" alt=".NET Core" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/dot-net/dot-net-original-wordmark.svg" title=".NET Framework" alt=".NET Framework" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" title="SQL Server" alt="SQL Server" width="60" height="60"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" title="Node.js" alt="Node.js" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/azure/azure-original-wordmark.svg" title="Azure" alt="Azure" width="60" height="60"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker" alt="Docker" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="50" height="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/dotnetcore/dotnetcore-original.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/dot-net/dot-net-original-wordmark.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" width="60"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/azure/azure-original-wordmark.svg" width="60"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" width="50"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" width="50"/>
 </div>
+
+---
+
+## 🤖 Artificial Intelligence 🔝
+
+<p align="center">
+  <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://custom-icon-badges.demolab.com/badge/comet%20ml-262c3e?style=for-the-badge&logo=logo_comet_ml&logoColor=white" />
+  <img src="https://img.shields.io/badge/dialogflow-FF9800?style=for-the-badge&logo=dialogflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/github%20copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" />
+  <img src="https://img.shields.io/badge/-HuggingFace-FDEE21?style=for-the-badge&logo=HuggingFace&logoColor=black" />
+  <img src="https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white" />
+  <img src="https://img.shields.io/badge/langchain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Lightning-792DE4?style=for-the-badge&logo=lightning&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/Weights_&_Biases-FFBE00?style=for-the-badge&logo=WeightsAndBiases&logoColor=white" />
+</p>
 
 ---
 
@@ -86,26 +117,20 @@ I am a Passion for Artificial general intelligence (AGI) | Software Engineer wit
 [whatsapp]: https://wa.me/+201145557959
 [My_Website]: https://mahmoudalyosifysite.github.io/
 
-<img src="https://github-readme-stats.vercel.app/api?username=MahmoudAlyosify&show_icons=true&locale=en&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" alt="MahmoudAlyosify" align="left"/> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MahmoudAlyosify&show_icons=true&locale=en&layout=compact&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" alt="MahmoudAlyosify"/>
+<img src="https://github-readme-stats.vercel.app/api?username=MahmoudAlyosify&show_icons=true&bg_color=0D1117&hide_border=true&theme=discord_old_blurple" align="left"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=MahmoudAlyosify&layout=compact&bg_color=0D1117&hide_border=true&theme=discord_old_blurple"/>
 
 -----------------------------------------------------
-<img align="center" src="https://github-profile-trophy.vercel.app/?username=MahmoudAlyosify&row=1&column=6" alt="Mahmoud" />
+
+<img align="center" src="https://github-profile-trophy.vercel.app/?username=MahmoudAlyosify&row=1&column=6" />
 <img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
 
 # Watch my contribution graph
 
-  <!-- <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="GitHub Snake Animation" /> -->
-
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MahmoudAlyosify/MahmoudAlyosify/output/pacman-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MahmoudAlyosify/MahmoudAlyosify/output/pacman-contribution-graph.svg">
-    <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/MahmoudAlyosify/MahmoudAlyosify/output/pacman-contribution-graph.svg">
-  </picture>
-
-
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MahmoudAlyosify/MahmoudAlyosify/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MahmoudAlyosify/MahmoudAlyosify/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/MahmoudAlyosify/MahmoudAlyosify/output/pacman-contribution-graph.svg">
+</picture>
 
 <img src="https://user-images.githubusercontent.com/59246305/191567487-0c6fb2ed-e5ef-495d-9dd2-cbeabb35d703.gif" width="1100" height="3">
-
-
-
