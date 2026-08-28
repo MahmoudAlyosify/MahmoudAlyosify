@@ -40,8 +40,8 @@ Here are some ideas to get you started:
 
 <table>
   <tr>
-    <td valign="top"><img src="./avi-ascii.svg" width="370" alt="Animated ASCII portrait of Mahmoud Alyosify" /></td>
-    <td valign="top"><img src="./info-card.svg" width="490" alt="Terminal-style profile information card" /></td>
+    <td valign="top"><img src="New Readme/avi-ascii.svg" width="370" alt="Animated ASCII portrait of Mahmoud Alyosify" /></td>
+    <td valign="top"><img src="New Readme/info-card.svg" width="490" alt="Terminal-style profile information card" /></td>
   </tr>
 </table>
 
