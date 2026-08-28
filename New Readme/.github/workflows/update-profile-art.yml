@@ -6,27 +6,66 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+    paths-ignore:
+      - "contrib-heatmap.svg"
+      - "data/contributions.json"
+      - "profile-stats.svg"
+      - "data/profile_stats.json"
 
 permissions:
   contents: write
 
+concurrency:
+  group: profile-art-refresh
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUNBUFFERED: "1"
+
 jobs:
   heatmap:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install heatmap dependencies
-        run: pip install requests==2.32.3 beautifulsoup4==4.12.3
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install pinned heatmap dependencies
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 beautifulsoup4==4.12.3
+
       - name: Fetch public contribution calendar
         env:
           GH_USERNAME: MahmoudAlyosify
         run: python scripts/fetch_contributions.py
+
       - name: Render animated SVG
         run: python scripts/render_heatmap_svg.py
-      - uses: stefanzweifel/git-auto-commit-action@v5
+
+      - name: Fetch public repository statistics
+        env:
+          GH_USERNAME: MahmoudAlyosify
+        run: python scripts/fetch_profile_stats.py
+
+      - name: Validate generated assets
+        run: |
+          python scripts/validate_assets.py
+          git diff --check
+          test -s contrib-heatmap.svg
+          test -s data/contributions.json
+          test -s profile-stats.svg
+          test -s data/profile_stats.json
+
+      - name: Commit generated assets when changed
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution heatmap"
-          file_pattern: "contrib-heatmap.svg data/contributions.json"
+          file_pattern: "contrib-heatmap.svg profile-stats.svg data/contributions.json data/profile_stats.json"
+          commit_options: "--no-verify"
