@@ -36,7 +36,16 @@ Here are some ideas to get you started:
     <img width="60%" height="50%" src="https://github-widgetbox.vercel.app/api/profile?username=MahmoudAlyosify&data=followers,repositories,stars,commits" alt="GitHub WidgetBox" />
   </a>
 </p>
----
+<br><br>
+
+<table>
+  <tr>
+    <td valign="top"><img src="New Readme/avi-ascii.svg" width="370" alt="Animated ASCII portrait of Mahmoud Alyosify" /></td>
+    <td valign="top"><img src="New Readme/info-card.svg" width="490" alt="Terminal-style profile information card" /></td>
+  </tr>
+</table>
+
+<br>
 
 ## 🧠 About Me
 
