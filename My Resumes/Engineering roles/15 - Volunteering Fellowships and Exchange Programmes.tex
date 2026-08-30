@@ -1,0 +1,253 @@
+%% ============================================================
+%%  Mahmoud Alyosify - Targeted CV 2026
+%%  Compiler : XeLaTeX
+%%  Uses Arial if installed, otherwise falls back automatically
+%%  to TeX Gyre Heros (metric-compatible Helvetica clone).
+%% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% -- Packages -----------------------------------------------------------------
+\usepackage[a4paper, top=9mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Icons are optional: the CV still compiles (and stays ATS-readable) without them.
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{%
+  \newcommand{\faEnvelope}{}\newcommand{\faPhone}{}\newcommand{\faMapMarker}{}%
+  \newcommand{\faLinkedin}{}\newcommand{\faGithub}{}\newcommand{\faRobot}{}%
+  \newcommand{\faChartBar}{}\newcommand{\faGlobe}{}%
+}
+
+% -- Fonts --------------------------------------------------------------------
+% Common f-ligatures are disabled: they extract as single glyphs and break
+% keyword matching in ATS parsers.
+\defaultfontfeatures{Ligatures={TeX,NoCommon}}
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}\setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}%
+}
+
+% -- Colours ------------------------------------------------------------------
+\definecolor{navy}{HTML}{0D2137}
+\definecolor{teal}{HTML}{0A7E8C}
+\definecolor{darkgray}{HTML}{2C2C2C}
+\definecolor{midgray}{HTML}{555555}
+
+% -- Hyperlinks + PDF metadata (indexed by many ATS parsers) ------------------
+\hypersetup{
+  colorlinks  = true,
+  urlcolor    = teal,
+  linkcolor   = teal,
+  pdftitle    = {Mahmoud Alyosify - CV for Volunteering, Fellowships and Exchange Programmes},
+  pdfauthor   = {Mahmoud Alyosify},
+  pdfsubject  = {Curriculum Vitae},
+  pdfkeywords = {Volunteering, Fellowship, Exchange Programme, Youth Programme,
+                 Scholarship, Community Leadership, Student Union, Mentoring,
+                 Open Education, Capacity Building, Technology for Good,
+                 Intercultural, Mobility, Erasmus, Global Youth, AI for Social Good},
+  pdflang     = {en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+% -- Building blocks ----------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{navy}\rule{\linewidth}{1.1pt}}\\[0.5pt]%
+  {\color{navy}\bfseries\fontsize{9.5}{11}\selectfont\uppercase{#1}}\\[-4pt]%
+  {\color{teal}\rule{\linewidth}{0.6pt}}%
+  \vspace{2pt}%
+}
+
+% {Role or Degree}{Organisation}{Dates}{Location / detail}
+\newcommand{\cventry}[4]{%
+  \vspace{2.5pt}%
+  \textbf{\color{darkgray}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}} \hfill {\color{midgray}#4}%
+}
+
+% {Project title}{Context / tech stack}{Dates}
+\newcommand{\cvproject}[3]{%
+  \vspace{2.5pt}%
+  {\bfseries\color{navy}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}}%
+}
+
+% Compact one-line project entry (used inside a cvitems list)
+\newcommand{\cvmini}[2]{\item {\bfseries\color{navy}#1} --- #2}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=11pt, itemsep=0.5pt, parsep=0pt, topsep=1pt,
+                  label={\textcolor{teal}{$\bullet$}}]
+}{%
+  \end{itemize}%
+}
+
+\newenvironment{dualcol}{%
+  \begin{tabular*}{\linewidth}{@{}p{0.495\linewidth}@{\hspace{0.01\linewidth}}p{0.495\linewidth}@{}}
+}{%
+  \end{tabular*}%
+}
+
+%% ============================================================
+\begin{document}
+\small
+
+%% -- HEADER ------------------------------------------------------------------
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{3pt}
+\begin{center}
+  {\fontsize{21}{24}\bfseries\color{navy} Mahmoud Alyosify}\\[3pt]
+  {\fontsize{10}{12}\color{teal}
+    AI Engineer, Educator \& Community Volunteer \enspace|\enspace Open Education, Youth Leadership \& Technology for Good
+    \enspace|\enspace MSc Artificial Intelligence, Queen's University (Canada)
+}\\[4pt]
+  {\color{midgray}
+    \faEnvelope\ \href{mailto:mahmoud.alyosify@gmail.com}{mahmoud.alyosify@gmail.com}
+    \enspace|\enspace
+    \faPhone\ +20 114 555 7959
+    \enspace|\enspace
+    \faMapMarker\ New Cairo, Egypt \textperiodcentered\ Open to Relocation}\\[2pt]
+  {\faLinkedin\ \href{https://linkedin.com/in/mahmoudalyosify}{linkedin.com/in/mahmoudalyosify}
+    \enspace|\enspace
+    \faGithub\ \href{https://github.com/MahmoudAlyosify}{github.com/MahmoudAlyosify}
+    \enspace|\enspace
+    \faGlobe\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}
+    \enspace|\enspace
+    \faRobot\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face}
+    \enspace|\enspace
+    \faChartBar\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle}}
+\end{center}
+
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{2pt}
+
+%% -- PROFILE -----------------------------------------------------------------
+\cvsection{Profile}
+
+{\color{darkgray}\justifying
+Egyptian AI engineer and educator who has spent five years giving away what he learns. Built free and low-cost Arabic-language technical education reaching \textbf{10,000+ learners} and \textbf{700K+ views} --- addressing a real access gap, since rigorous computer-science material rarely exists in the first language of the students who need it most. Elected \textbf{Secretary of the Higher Scientific \& Technological Committee} of the Assiut University Student Union, served as an \textbf{Institute Ambassador}, and led a volunteer team at the \textbf{USAID University Center for Career Development} helping students prepare for employment. Currently studying in \textbf{Canada} on a fully competitive \textbf{Digilians Presidential Scholarship} (MSc Artificial Intelligence, Queen's University, expected \textbf{Nov 2026}). Seeking volunteering, fellowship and exchange opportunities where technical skill and cross-cultural collaboration create something useful for people.}
+
+%% -- VOLUNTEERING ------------------------------------------------------------
+\cvsection{Volunteering \& Community Leadership}
+
+\cventry{Volunteer Team Leader}{USAID University Center for Career Development}
+        {During undergraduate study}{Assiut, Egypt}
+\begin{cvitems}
+  \item Led a volunteer team supporting university students with career development and employability preparation at a USAID-funded centre.
+  \item Coordinated team activities and mentored peers navigating the transition from study to work.
+\end{cvitems}
+
+\cventry{Secretary, Higher Scientific \& Technological Committee}{Student Union, Assiut University}
+        {During undergraduate study}{Assiut, Egypt}
+\begin{cvitems}
+  \item Elected to organise scientific and technological activities for the student body, coordinating events, competitions and technical initiatives across the faculty.
+\end{cvitems}
+
+\cventry{Ambassador}{Information Technology Institute (ITI), Assiut}
+        {During undergraduate study}{Assiut, Egypt}
+\begin{cvitems}
+  \item Represented ITI on campus, guiding students toward free national technical-training pathways they would otherwise not have heard about.
+\end{cvitems}
+
+\cventry{Open Technical Educator --- Arabic-Language Computer Science}{YouTube \& Udemy}
+        {2020 -- Present}{Remote, Global Audience}
+\begin{cvitems}
+  \item Created and published Arabic-language courses in \textbf{discrete mathematics, algorithms, probability, statistics} and \textbf{graph data mining}, reaching \textbf{10,000+ learners} and \textbf{700K+ views} across the Arab world.
+  \item Awarded \textbf{1st Place in the Science \& Technology Content Competition} for this work.
+\end{cvitems}
+
+%% -- EDUCATION ---------------------------------------------------------------
+\cvsection{Education \& Scholarships}
+
+\cventry{MSc in Artificial Intelligence}{Queen's University, Kingston, Ontario, Canada}
+        {Sep 2025 -- Nov 2026}{Expected Nov 2026}
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship} --- competitive national AI graduate fellowship funding international study in Canada.
+  \item Master's research on efficient, lower-energy language-model inference --- reducing the computational and \textbf{energy cost} of AI systems.
+\end{cvitems}
+
+\cventry{B.Sc.\ Computer \& Information Science (Bioinformatics)}{Assiut University, Egypt}
+        {Sep 2019 -- Jul 2023}{GPA: 3.53 / 4.00}
+\begin{cvitems}
+  \item Graduation Project: \href{https://vitalismsolution.github.io/}{\textbf{Vitalism Solution}} --- a contactless system estimating vital signs from ordinary video, aimed at making basic health monitoring possible without specialised equipment. \textbf{Grade A+}.
+  \item \textbf{Ideal Student Award}, Faculty of Computers \& Information, 2022--2023 --- awarded for combined academic and community contribution.
+\end{cvitems}
+
+%% -- INTERNATIONAL -----------------------------------------------------------
+\cvsection{International Experience \& Recognition}
+
+\begin{cvitems}
+  \item \textbf{Studying in Canada} (2025--2026) on a competitive international scholarship --- living and working in a multicultural academic environment.
+  \item \textbf{Semi-Finalist, Microsoft Imagine Cup 2023} --- global student technology competition.
+  \item \textbf{Finalist, ISEIC 2023} --- international research and innovation competition.
+  \item \textbf{1st Place, Smart Cities Hackathon 2022} --- team-based rapid solution development.
+  \item \textbf{COVID-19 Contact Tracing} certification --- Johns Hopkins University, completed during the pandemic response.
+\end{cvitems}
+
+%% -- PROFESSIONAL ------------------------------------------------------------
+\cvsection{Professional \& Teaching Experience}
+
+\cventry{Machine Learning Instructor}{National Telecommunication Institute (NTI)}
+        {Jul 2025 -- Sep 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Designed and delivered a \textbf{90-hour} hands-on machine learning program for engineering and computer-science students at Egypt's national ICT institute.
+\end{cvitems}
+
+\cventry{AI in Cybersecurity Intern}{e\& Egypt --- via NTI (On-the-Job Training)}
+        {Jun 2025 -- Jul 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Applied AI-driven tooling across threat intelligence, digital forensics and enterprise security analysis.
+\end{cvitems}
+
+\cventry{Systems Engineer (Military Service)}{National Company for Roads Building \& Development}
+        {Feb 2024 -- Mar 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Completed national military service supporting backend systems for public road and toll infrastructure serving \textbf{50\%+ of Egyptian vehicles} across \textbf{70\%+ of national roads}.
+  \item Co-developed an internal data-management and reporting application used across multiple departments.
+\end{cvitems}
+
+%% -- SKILLS ------------------------------------------------------------------
+\cvsection{Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\hyphenpenalty=10000\arraybackslash}p{35mm} X@{}}
+\textbf{Leadership \& People} &
+Team Leadership, Volunteer Coordination, Mentoring, Event \& Activity Organisation, Public Speaking, Teaching \& Facilitation, Cross-Cultural Communication, Working in Multilingual Teams \\
+
+\textbf{Technical} &
+Artificial Intelligence, Machine Learning, Python, Data Analysis, Large Language Models, Computer Vision, Cloud Computing (AWS), Software Development (C\#, .NET, Angular), SQL \\
+
+\textbf{Technology for Good} &
+Accessible Health Technology (contactless vital signs), Open Educational Content, Energy-Efficient AI, Synthetic-Media \& Misinformation Detection, Public-Safety Risk Prediction \\
+
+\textbf{Languages} &
+\textbf{Arabic} --- Native \textperiodcentered\ \textbf{English} --- Professional Working Proficiency \textperiodcentered\ \textbf{French} --- Basic \\
+\end{tabularx}
+
+%% -- PROJECTS ----------------------------------------------------------------
+\cvsection{Selected Projects with Social Relevance}
+
+\begin{cvitems}
+  \cvmini{\href{https://vitalismsolution.github.io/}{Vitalism Solution}}{contactless estimation of vital signs from ordinary video --- health monitoring without specialised or expensive sensors. Imagine Cup 2023 Semi-Finalist.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/AudioShield}{AudioShield}}{detection of deepfake audio, aimed at protecting people from voice-based fraud and manipulated media.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/SCRAP-Satellite-Collision-Risk-Assessment-and-Prediction}{SCRAP}}{early warning of satellite collision risk \textbf{48+ hours} ahead, supporting safe use of shared orbital space.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/minimal-lm}{Efficient AI Research}}{master's research cutting the computation and \textbf{energy} required to run language models.}
+  \item \textbf{Also:} multi-agent open-source intelligence platforms \textperiodcentered\ self-supervised computer vision \textperiodcentered\ reinforcement learning for reducing cloud resource waste. Full portfolio: \href{https://mahmoudalyosifysite.github.io/}{mahmoudalyosifysite.github.io}.
+\end{cvitems}
+
+\vspace{3pt}
+{\color{navy}\rule{\linewidth}{0.8pt}}
+
+\end{document}

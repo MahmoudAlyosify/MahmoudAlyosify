@@ -1,0 +1,276 @@
+%% ============================================================
+%%  Mahmoud Alyosify - Targeted CV 2026
+%%  Compiler : XeLaTeX
+%%  Uses Arial if installed, otherwise falls back automatically
+%%  to TeX Gyre Heros (metric-compatible Helvetica clone).
+%% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% -- Packages -----------------------------------------------------------------
+\usepackage[a4paper, top=9mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Icons are optional: the CV still compiles (and stays ATS-readable) without them.
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{%
+  \newcommand{\faEnvelope}{}\newcommand{\faPhone}{}\newcommand{\faMapMarker}{}%
+  \newcommand{\faLinkedin}{}\newcommand{\faGithub}{}\newcommand{\faRobot}{}%
+  \newcommand{\faChartBar}{}\newcommand{\faGlobe}{}%
+}
+
+% -- Fonts --------------------------------------------------------------------
+% Common f-ligatures are disabled: they extract as single glyphs and break
+% keyword matching in ATS parsers.
+\defaultfontfeatures{Ligatures={TeX,NoCommon}}
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}\setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}%
+}
+
+% -- Colours ------------------------------------------------------------------
+\definecolor{navy}{HTML}{0D2137}
+\definecolor{teal}{HTML}{0A7E8C}
+\definecolor{darkgray}{HTML}{2C2C2C}
+\definecolor{midgray}{HTML}{555555}
+
+% -- Hyperlinks + PDF metadata (indexed by many ATS parsers) ------------------
+\hypersetup{
+  colorlinks  = true,
+  urlcolor    = teal,
+  linkcolor   = teal,
+  pdftitle    = {Mahmoud Alyosify - Software Engineer - CV},
+  pdfauthor   = {Mahmoud Alyosify},
+  pdfsubject  = {Curriculum Vitae},
+  pdfkeywords = {Software Engineer, Backend Developer, .NET Developer, C Sharp,
+                 ASP.NET Core, Entity Framework, SQL Server, Angular, TypeScript,
+                 REST API, FastAPI, Python, C++, Full Stack, Docker, Git,
+                 Database Design, Desktop Applications, AI Integration},
+  pdflang     = {en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+% -- Building blocks ----------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{navy}\rule{\linewidth}{1.1pt}}\\[0.5pt]%
+  {\color{navy}\bfseries\fontsize{9.5}{11}\selectfont\uppercase{#1}}\\[-4pt]%
+  {\color{teal}\rule{\linewidth}{0.6pt}}%
+  \vspace{2pt}%
+}
+
+% {Role or Degree}{Organisation}{Dates}{Location / detail}
+\newcommand{\cventry}[4]{%
+  \vspace{2.5pt}%
+  \textbf{\color{darkgray}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}} \hfill {\color{midgray}#4}%
+}
+
+% {Project title}{Context / tech stack}{Dates}
+\newcommand{\cvproject}[3]{%
+  \vspace{2.5pt}%
+  {\bfseries\color{navy}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}}%
+}
+
+% Compact one-line project entry (used inside a cvitems list)
+\newcommand{\cvmini}[2]{\item {\bfseries\color{navy}#1} --- #2}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=11pt, itemsep=0.5pt, parsep=0pt, topsep=1pt,
+                  label={\textcolor{teal}{$\bullet$}}]
+}{%
+  \end{itemize}%
+}
+
+\newenvironment{dualcol}{%
+  \begin{tabular*}{\linewidth}{@{}p{0.495\linewidth}@{\hspace{0.01\linewidth}}p{0.495\linewidth}@{}}
+}{%
+  \end{tabular*}%
+}
+
+%% ============================================================
+\begin{document}
+\small
+
+%% -- HEADER ------------------------------------------------------------------
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{3pt}
+\begin{center}
+  {\fontsize{21}{24}\bfseries\color{navy} Mahmoud Alyosify}\\[3pt]
+  {\fontsize{10}{12}\color{teal}
+    Software Engineer \enspace|\enspace .NET \& Python Backend, Data Systems \& AI-Enabled Applications
+    \enspace|\enspace MSc Artificial Intelligence, Queen's University (Canada)
+}\\[4pt]
+  {\color{midgray}
+    \faEnvelope\ \href{mailto:mahmoud.alyosify@gmail.com}{mahmoud.alyosify@gmail.com}
+    \enspace|\enspace
+    \faPhone\ +20 114 555 7959
+    \enspace|\enspace
+    \faMapMarker\ New Cairo, Egypt \textperiodcentered\ Open to Relocation}\\[2pt]
+  {\faLinkedin\ \href{https://linkedin.com/in/mahmoudalyosify}{linkedin.com/in/mahmoudalyosify}
+    \enspace|\enspace
+    \faGithub\ \href{https://github.com/MahmoudAlyosify}{github.com/MahmoudAlyosify}
+    \enspace|\enspace
+    \faGlobe\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}
+    \enspace|\enspace
+    \faRobot\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face}
+    \enspace|\enspace
+    \faChartBar\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle}}
+\end{center}
+
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{2pt}
+
+%% -- SUMMARY -----------------------------------------------------------------
+\cvsection{Professional Summary}
+
+{\color{darkgray}\justifying
+Software Engineer with production experience on \textbf{national-scale infrastructure} --- backend systems for Egyptian toll operations serving \textbf{50\%+ of national vehicles} --- built in \textbf{C\#, .NET, Entity Framework and SQL Server}. Full-stack trained (\textbf{Route Academy .NET \& Angular diploma}, plus \textbf{300+ hours} of ITI development courses in .NET, SQL Server, MEARN stack and Android), and equally comfortable shipping \textbf{Python services with FastAPI, Docker and AWS}. Now completing an \textbf{MSc in Artificial Intelligence at Queen's University, Canada} (expected \textbf{Nov 2026}) on a \textbf{Digilians Presidential Scholarship} --- bringing the increasingly rare combination of \textbf{solid software engineering fundamentals} and \textbf{genuine AI/ML depth} to teams building AI-enabled products.}
+
+%% -- EDUCATION ---------------------------------------------------------------
+\cvsection{Education}
+
+\cventry{MSc in Artificial Intelligence}{Queen's University, Kingston, Ontario, Canada}
+        {Sep 2025 -- Nov 2026}{Expected Nov 2026}
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship} --- competitive national AI graduate fellowship.
+  \item Coursework: \textbf{Cloud Computing, End-to-End ML Pipelines, Large Language Models, Deep Learning, Reinforcement Learning}.
+\end{cvitems}
+
+\cventry{B.Sc.\ Computer \& Information Science (Bioinformatics)}{Assiut University, Egypt}
+        {Sep 2019 -- Jul 2023}{GPA: 3.53 / 4.00}
+\begin{cvitems}
+  \item Foundations in data structures, algorithms, operating systems, databases and discrete mathematics; approx.\ \textbf{100 competitive-programming problems} solved on Codeforces.
+  \item Graduation Project: \href{https://vitalismsolution.github.io/}{\textbf{Vitalism Solution}} --- \textbf{Grade A+}; \textbf{Semi-Finalist, Microsoft Imagine Cup 2023}.
+\end{cvitems}
+
+%% -- TECHNICAL SKILLS --------------------------------------------------------
+\cvsection{Technical Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\hyphenpenalty=10000\arraybackslash}p{35mm} X@{}}
+\textbf{Backend \& .NET} &
+C\#, .NET, ASP.NET Core, ASP.NET MVC, Web API, Entity Framework, ADO.NET, LINQ, WinForms, Crystal Reports, Stored Procedures, Triggers, RESTful API Design \\
+
+\textbf{Python \& Services} &
+Python, FastAPI, Flask, Streamlit, Docker, AWS, CI/CD, ONNX, Background Jobs \& Pipelines \\
+
+\textbf{Frontend} &
+Angular, TypeScript, JavaScript, HTML5, CSS, Bootstrap, React (MEARN training) \\
+
+\textbf{Databases} &
+SQL Server, MySQL, MongoDB, Database Design \& Normalisation, Query Optimisation, ETL Pipelines \\
+
+\textbf{AI Integration} &
+LLM APIs, Prompt Engineering, RAG, Fine-Tuning (LoRA, QLoRA), PyTorch, TensorFlow, Scikit-learn, FAISS, ChromaDB, Agentic Coding Tools (Claude Code, Cursor, Copilot) \\
+
+\textbf{Languages \& Tools} &
+C\#, Python, C++, C, JavaScript, TypeScript, SQL, Go, Java, R, MATLAB, Git/GitHub, Linux, Bash \\
+\end{tabularx}
+
+%% -- WORK EXPERIENCE ---------------------------------------------------------
+\cvsection{Professional Experience}
+
+\cventry{Systems Engineer (Military Service)}{National Company for Roads Building \& Development}
+        {Feb 2024 -- Mar 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Supported and maintained backend systems for national toll infrastructure serving \textbf{50\%+ of Egyptian vehicles} across \textbf{70\%+ of national roads}, working within the Control and Command environment.
+  \item Co-developed an internal multi-department \textbf{data-management and reporting desktop application} using \textbf{C\#, .NET, Entity Framework, SQL Server} and \textbf{Crystal Reports}, replacing manual reporting across stores and departments.
+  \item Debugged and optimised \textbf{real-time transportation software} and provided technical support for legacy applications, minimising downtime and ensuring operational continuity.
+\end{cvitems}
+
+\cventry{Machine Learning Instructor}{National Telecommunication Institute (NTI)}
+        {Jul 2025 -- Sep 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Delivered a \textbf{90-hour} hands-on ML program for engineering and CS students, guiding them through building complete solutions on real datasets.
+\end{cvitems}
+
+\cventry{AI in Cybersecurity Intern}{e\& Egypt --- via NTI (On-the-Job Training)}
+        {Jun 2025 -- Jul 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Applied AI-driven security tooling across threat intelligence, digital forensics and enterprise security analysis.
+\end{cvitems}
+
+\cventry{Online Instructor --- Programming, Algorithms \& Data Science}{Udemy \& YouTube}
+        {2020 -- Present}{Remote}
+\begin{cvitems}
+  \item Authored and taught Arabic-language courses in discrete mathematics, algorithms, probability, statistics and graph data mining for \textbf{10,000+ learners} (\textbf{700K+ views}).
+\end{cvitems}
+
+%% -- PROJECTS ----------------------------------------------------------------
+\cvsection{Selected Software Projects}
+
+\cvproject{Inventory Management System}
+          {C\# \textperiodcentered\ ASP.NET Core \textperiodcentered\ SQL Server \textperiodcentered\ Barcode Scanning}
+          {}
+\begin{cvitems}
+  \item Built a CRUD-based inventory system with barcode scanning and alert notifications, covering database schema design through user-facing workflow.
+\end{cvitems}
+
+\cvproject{E-Commerce Web Application}
+          {Angular \textperiodcentered\ Bootstrap \textperiodcentered\ Stripe API \textperiodcentered\ JWT Authentication}
+          {}
+\begin{cvitems}
+  \item Developed a frontend shopping experience with secure JWT-based login and \textbf{Stripe} payment integration.
+\end{cvitems}
+
+\cvproject{Mini-FAT File System}
+          {C \textperiodcentered\ Systems Programming \textperiodcentered\ Operating Systems}
+          {}
+\begin{cvitems}
+  \item Implemented a FAT-style file system in C from first principles --- allocation tables, directory structures and file operations.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/horus-sentinel}{HORUS Sentinel --- Multi-Agent Intelligence Platform}}
+          {Python \textperiodcentered\ Multi-Agent Architecture \textperiodcentered\ Knowledge Graphs \textperiodcentered\ Self-Hosted LLM}
+          {2026}
+\begin{cvitems}
+  \item Architected a distributed system of specialised autonomous agents writing into a shared knowledge-graph state layer, with a self-hosted model generating evidence-backed reports.
+\end{cvitems}
+
+\vspace{3pt}
+{\bfseries\color{navy}Additional Projects}
+\begin{cvitems}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/Horus-OSINT}{Horus-OSINT}}{fine-tuned \textbf{Meta-Llama-3-8B} on \textbf{159,826} records and deployed it on \textbf{AWS} as an interactive service.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/AudioShield}{AudioShield}}{CNN-based audio classifier served through a Streamlit application with automated PDF reporting.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/Analyzing-Review-Effort-in-Human-vs.-Agentic-Pull-Requests}{Human vs.\ Agentic Pull Requests}}{reproducible GitHub-mining pipeline analysing code-review effort across large open-source repositories.}
+  \item \textbf{Also:} Student Affairs System \textperiodcentered\ Vitalism Solution (rPPG) \textperiodcentered\ SCRAP \textperiodcentered\ SimCLR-Vision-SSL (ONNX/FAISS) \textperiodcentered\ ATM Transaction Analysis.
+\end{cvitems}
+
+%% -- CERTIFICATIONS ----------------------------------------------------------
+\cvsection{Certifications \& Awards}
+
+\begin{dualcol}
+  \textbf{Full Stack Development Diploma} --- .NET \& Angular (Route Academy) &
+  \textbf{.NET Web Development} --- ITI (120 hrs) \\[2pt]
+  \textbf{SQL Server \& C\#} --- ITI (90 hrs) &
+  \textbf{MEARN Stack Development} --- ITI (60 hrs) \\[2pt]
+  \textbf{AWS Academy} --- ML Foundations, ML for NLP, Data Engineering &
+  \textbf{Microsoft Certified: Data Analyst Associate} \\[2pt]
+  \textbf{1st Place} --- Smart Cities Hackathon 2022 &
+  \textbf{Semi-Finalist} --- Microsoft Imagine Cup 2023 \\
+\end{dualcol}
+
+%% -- LANGUAGES ---------------------------------------------------------------
+\cvsection{Languages}
+
+\begin{cvitems}
+  \item \textbf{Arabic:} Native \textperiodcentered\ \textbf{English:} Professional Working Proficiency \textperiodcentered\ \textbf{French:} Basic.
+\end{cvitems}
+
+\vspace{3pt}
+{\color{navy}\rule{\linewidth}{0.8pt}}
+
+\end{document}

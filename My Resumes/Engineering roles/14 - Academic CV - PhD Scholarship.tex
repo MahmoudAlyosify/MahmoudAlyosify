@@ -1,0 +1,274 @@
+%% ============================================================
+%%  Mahmoud Alyosify - Targeted CV 2026
+%%  Compiler : XeLaTeX
+%%  Uses Arial if installed, otherwise falls back automatically
+%%  to TeX Gyre Heros (metric-compatible Helvetica clone).
+%% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% -- Packages -----------------------------------------------------------------
+\usepackage[a4paper, top=9mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Icons are optional: the CV still compiles (and stays ATS-readable) without them.
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{%
+  \newcommand{\faEnvelope}{}\newcommand{\faPhone}{}\newcommand{\faMapMarker}{}%
+  \newcommand{\faLinkedin}{}\newcommand{\faGithub}{}\newcommand{\faRobot}{}%
+  \newcommand{\faChartBar}{}\newcommand{\faGlobe}{}%
+}
+
+% -- Fonts --------------------------------------------------------------------
+% Common f-ligatures are disabled: they extract as single glyphs and break
+% keyword matching in ATS parsers.
+\defaultfontfeatures{Ligatures={TeX,NoCommon}}
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}\setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}%
+}
+
+% -- Colours ------------------------------------------------------------------
+\definecolor{navy}{HTML}{0D2137}
+\definecolor{teal}{HTML}{0A7E8C}
+\definecolor{darkgray}{HTML}{2C2C2C}
+\definecolor{midgray}{HTML}{555555}
+
+% -- Hyperlinks + PDF metadata (indexed by many ATS parsers) ------------------
+\hypersetup{
+  colorlinks  = true,
+  urlcolor    = teal,
+  linkcolor   = teal,
+  pdftitle    = {Mahmoud Alyosify - Academic CV - PhD Applicant in Artificial Intelligence},
+  pdfauthor   = {Mahmoud Alyosify},
+  pdfsubject  = {Academic Curriculum Vitae},
+  pdfkeywords = {PhD Applicant, Academic CV, Artificial Intelligence Research,
+                 Efficient Inference, Large Language Models, Decoding, Evaluation,
+                 Self-Supervised Learning, Reinforcement Learning, Multi-Agent Systems,
+                 Empirical Software Engineering, Reproducibility, Scholarship,
+                 Queen's University, Research Assistant, Teaching Assistant},
+  pdflang     = {en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+% -- Building blocks ----------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{navy}\rule{\linewidth}{1.1pt}}\\[0.5pt]%
+  {\color{navy}\bfseries\fontsize{9.5}{11}\selectfont\uppercase{#1}}\\[-4pt]%
+  {\color{teal}\rule{\linewidth}{0.6pt}}%
+  \vspace{2pt}%
+}
+
+% {Role or Degree}{Organisation}{Dates}{Location / detail}
+\newcommand{\cventry}[4]{%
+  \vspace{2.5pt}%
+  \textbf{\color{darkgray}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}} \hfill {\color{midgray}#4}%
+}
+
+% {Project title}{Context / tech stack}{Dates}
+\newcommand{\cvproject}[3]{%
+  \vspace{2.5pt}%
+  {\bfseries\color{navy}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}}%
+}
+
+% Compact one-line project entry (used inside a cvitems list)
+\newcommand{\cvmini}[2]{\item {\bfseries\color{navy}#1} --- #2}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=11pt, itemsep=0.5pt, parsep=0pt, topsep=1pt,
+                  label={\textcolor{teal}{$\bullet$}}]
+}{%
+  \end{itemize}%
+}
+
+\newenvironment{dualcol}{%
+  \begin{tabular*}{\linewidth}{@{}p{0.495\linewidth}@{\hspace{0.01\linewidth}}p{0.495\linewidth}@{}}
+}{%
+  \end{tabular*}%
+}
+
+%% ============================================================
+\begin{document}
+\small
+
+%% -- HEADER ------------------------------------------------------------------
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{3pt}
+\begin{center}
+  {\fontsize{21}{24}\bfseries\color{navy} Mahmoud Alyosify}\\[3pt]
+  {\fontsize{10}{12}\color{teal}
+    Academic CV \enspace|\enspace PhD Applicant in Artificial Intelligence
+    \enspace|\enspace Efficient Language-Model Inference \textperiodcentered\ Trustworthy \& Evaluable AI Systems
+}\\[4pt]
+  {\color{midgray}
+    \faEnvelope\ \href{mailto:mahmoud.alyosify@gmail.com}{mahmoud.alyosify@gmail.com}
+    \enspace|\enspace
+    \faPhone\ +20 114 555 7959
+    \enspace|\enspace
+    \faMapMarker\ New Cairo, Egypt \textperiodcentered\ Open to Relocation}\\[2pt]
+  {\faLinkedin\ \href{https://linkedin.com/in/mahmoudalyosify}{linkedin.com/in/mahmoudalyosify}
+    \enspace|\enspace
+    \faGithub\ \href{https://github.com/MahmoudAlyosify}{github.com/MahmoudAlyosify}
+    \enspace|\enspace
+    \faGlobe\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}
+    \enspace|\enspace
+    \faRobot\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face}
+    \enspace|\enspace
+    \faChartBar\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle}}
+\end{center}
+
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{2pt}
+
+%% -- RESEARCH INTERESTS ------------------------------------------------------
+\cvsection{Research Interests}
+
+{\color{darkgray}\justifying
+\textbf{Efficient inference for large language models} --- training-free decoding-time methods, computational and energy cost of generation \textperiodcentered\ \textbf{Rigorous evaluation of generative systems} --- non-inferiority frameworks, length-controlled judging, reproducibility \textperiodcentered\ \textbf{Self-supervised and contrastive representation learning} \textperiodcentered\ \textbf{Reinforcement learning for resource-constrained decision-making} \textperiodcentered\ \textbf{Multi-agent systems and knowledge-graph-grounded reasoning} \textperiodcentered\ \textbf{Empirical software engineering in the age of coding agents}.}
+
+%% -- EDUCATION ---------------------------------------------------------------
+\cvsection{Education}
+
+\cventry{MSc in Artificial Intelligence}{Queen's University, Kingston, Ontario, Canada}
+        {Sep 2025 -- Nov 2026}{Expected Nov 2026}
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship} --- competitive national AI graduate fellowship.
+  \item \textbf{Master's Research Project (CISC 898):} \textit{Verbosity-Aware Decoding for Token-Efficient Language Model Inference} --- Supervisor: \textbf{Dr.\ Rahatara Ferdousi}.
+  \item Graduate coursework: \textbf{Large Language Models, Generative AI, Deep Learning, Reinforcement Learning, Cloud Computing, End-to-End Machine Learning Pipelines}.
+\end{cvitems}
+
+\cventry{B.Sc.\ Computer \& Information Science --- Bioinformatics}{Assiut University, Egypt}
+        {Sep 2019 -- Jul 2023}{GPA: 3.53 / 4.00}
+\begin{cvitems}
+  \item Undergraduate thesis: \href{https://vitalismsolution.github.io/}{\textbf{Vitalism Solution}} --- contactless vital-sign estimation from video using remote photoplethysmography (rPPG) and wavelet-based signal filtering. \textbf{Grade: A+}.
+  \item \textbf{Semi-Finalist, Microsoft Imagine Cup 2023}; \textbf{Finalist, ISEIC 2023} (international research competition).
+\end{cvitems}
+
+%% -- RESEARCH ----------------------------------------------------------------
+\cvsection{Research Experience \& Projects}
+
+\cvproject{Verbosity-Aware Decoding for Token-Efficient Language Model Inference}
+          {Master's Research Project (CISC 898), Queen's University \textperiodcentered\ Supervisor: Dr.\ Rahatara Ferdousi \textperiodcentered\ \href{https://github.com/MahmoudAlyosify/minimal-lm}{code}}
+          {2026 -- Present}
+\begin{cvitems}
+  \item \textbf{Research question:} can generated-token count be reduced at inference time without retraining and without measurable loss of semantic content?
+  \item \textbf{Method:} a \textbf{training-free LogitsProcessor} fusing stop-token, n-gram-repetition and semantic-redundancy signals under an \textbf{entropy-driven gate}; adds no KV-cache or attention overhead and requires no architecture change.
+  \item \textbf{Design:} \textbf{pre-registered evaluation protocol} testing semantic preservation as a \textbf{paired non-inferiority hypothesis} (BERTScore, ROUGE, exact-match/F1, length-controlled LLM judge) --- the correct statistical framing for a "no worse than" claim, which conventional significance testing cannot supply.
+  \item \textbf{Scope:} \textbf{three open-weight model families} (Mistral-7B-Instruct, Llama-3.1-8B-Instruct, Qwen2.5-3B-Instruct) across \textbf{four benchmarks} (MT-Bench, YapBench, XSum, SQuAD-v2), reporting token reduction, TTFT / inter-token latency and \textbf{GPU energy via NVML}.
+  \item \textbf{Reproducibility:} deterministic runs with fixed seeds and versioned environments on pinned AWS GPU instances.
+\end{cvitems}
+
+\cvproject{Analyzing Review Effort in Human vs.\ Agentic Pull Requests}
+          {Empirical Software Engineering \textperiodcentered\ Repository Mining \textperiodcentered\ \href{https://github.com/MahmoudAlyosify/Analyzing-Review-Effort-in-Human-vs.-Agentic-Pull-Requests}{code}}
+          {2026}
+\begin{cvitems}
+  \item Built a reproducible mining pipeline over large-scale open-source repositories to quantify whether AI-agent-generated pull requests shift code-review effort relative to human-authored contributions, with explicit cohort definitions and inclusion criteria.
+\end{cvitems}
+
+\cvproject{Self-Supervised Contrastive Representation Learning --- A Controlled Augmentation Study}
+          {SimCLR \textperiodcentered\ SupCon \textperiodcentered\ PyTorch \textperiodcentered\ \href{https://github.com/MahmoudAlyosify/SimCLR-Vision-SSL}{code}}
+          {2026}
+\begin{cvitems}
+  \item Conducted a \textbf{42-experiment augmentation sweep} isolating which transformations drive representation quality, extended with a semi-supervised \textbf{SupCon} objective; \textbf{84.30\% top-1 accuracy} with retrieval evaluation via ONNX/FAISS.
+\end{cvitems}
+
+\cvproject{Deep Reinforcement Learning for Cloud Resource Provisioning}
+          {PPO \textperiodcentered\ DQN \textperiodcentered\ Custom Gymnasium Environment \textperiodcentered\ \href{https://github.com/MahmoudAlyosify/RL-Cloud-Autoscaler}{code}}
+          {2026}
+\begin{cvitems}
+  \item Designed a custom simulation environment and multi-objective \textbf{cost--latency reward}; compared PPO and DQN against static and threshold-based baselines representative of deployed practice.
+\end{cvitems}
+
+\cvproject{HORUS Sentinel --- Multi-Agent Intelligence Synthesis over a Knowledge Graph}
+          {Multi-Agent Systems \textperiodcentered\ Fine-Tuned LLM \textperiodcentered\ Knowledge Graphs \textperiodcentered\ \href{https://github.com/MahmoudAlyosify/horus-sentinel}{code}}
+          {2026}
+\begin{cvitems}
+  \item Architected a swarm of specialised autonomous agents building a \textbf{living knowledge graph} as shared memory, over which a self-hosted fine-tuned model produces prioritised, source-traceable reports.
+\end{cvitems}
+
+\vspace{3pt}
+{\bfseries\color{navy}Further Research Output}
+\begin{cvitems}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/Horus-OSINT}{Horus-OSINT}}{domain adaptation of \textbf{Meta-Llama-3-8B} over \textbf{159,826} GTD/GDELT records, deployed on AWS.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/SCRAP-Satellite-Collision-Risk-Assessment-and-Prediction}{SCRAP}}{predictive modelling of satellite collision risk constrained to a \textbf{48-hour} operational lead time.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/AudioShield}{AudioShield}}{CNN-based synthetic-speech detection over mel-spectrogram representations.}
+  \item \textbf{Open research artefacts:} \href{https://github.com/MahmoudAlyosify}{GitHub} \textperiodcentered\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face} \textperiodcentered\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle} \textperiodcentered\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}.
+\end{cvitems}
+
+%% -- TEACHING ----------------------------------------------------------------
+\cvsection{Teaching Experience}
+
+\cventry{Machine Learning Instructor}{National Telecommunication Institute (NTI)}
+        {Jul 2025 -- Sep 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Designed and delivered a \textbf{90-hour} machine learning program for engineering and computer-science students covering supervised learning, PCA and neural networks with hands-on laboratory sessions.
+\end{cvitems}
+
+\cventry{Online Instructor --- Mathematics, Algorithms \& Data Science}{Udemy \& YouTube}
+        {2020 -- Present}{Remote}
+\begin{cvitems}
+  \item Authored Arabic-language curricula in \textbf{discrete mathematics, algorithms, probability, statistics} and \textbf{graph data mining}, reaching \textbf{10,000+ learners} and \textbf{700K+ views}.
+\end{cvitems}
+
+%% -- PROFESSIONAL ------------------------------------------------------------
+\cvsection{Professional Experience}
+
+\cventry{AI in Cybersecurity Intern}{e\& Egypt --- via NTI (On-the-Job Training)}
+        {Jun 2025 -- Jul 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Applied AI methods across threat intelligence, digital forensics and enterprise security analysis.
+\end{cvitems}
+
+\cventry{Systems Engineer (Military Service)}{National Company for Roads Building \& Development}
+        {Feb 2024 -- Mar 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Supported backend systems for national toll infrastructure serving \textbf{50\%+ of Egyptian vehicles}; co-developed an internal data-management application in \textbf{C\#, .NET, Entity Framework, SQL Server}.
+\end{cvitems}
+
+%% -- SKILLS ------------------------------------------------------------------
+\cvsection{Research \& Technical Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\hyphenpenalty=10000\arraybackslash}p{35mm} X@{}}
+\textbf{Methodology} &
+Pre-Registered Protocols, Paired Non-Inferiority Testing, Hypothesis Testing, Ablation \& Sweep Design, Baseline Construction, Reproducible \& Deterministic Experimentation, Scientific Writing \\
+
+\textbf{Frameworks} &
+PyTorch, Hugging Face Transformers / PEFT / Datasets, TensorFlow, Scikit-learn, Gymnasium, Optuna, SHAP, NumPy, Pandas, PySpark, FAISS, ONNX \\
+
+\textbf{Infrastructure} &
+AWS GPU Instances, Docker, FastAPI, CI/CD, Git/GitHub, Linux, NVML Energy Profiling \\
+
+\textbf{Programming} &
+Python, C++, C, SQL, C\#, Go, R, MATLAB, Bash \\
+\end{tabularx}
+
+%% -- AWARDS ------------------------------------------------------------------
+\cvsection{Awards, Scholarships \& Service}
+
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship}, Queen's University --- competitive national AI graduate fellowship (2025).
+  \item \textbf{Semi-Finalist}, Microsoft Imagine Cup 2023 \textperiodcentered\ \textbf{Finalist}, ISEIC 2023 \textperiodcentered\ \textbf{1st Place}, Smart Cities Hackathon 2022 \textperiodcentered\ \textbf{1st Place}, Science \& Technology Content Competition.
+  \item \textbf{Ideal Student Award}, Faculty of Computers \& Information, Assiut University, 2022--2023.
+  \item \textbf{Service:} Secretary, Higher Scientific \& Technological Committee, Student Union, Assiut University \textperiodcentered\ Ambassador, Information Technology Institute (ITI), Assiut \textperiodcentered\ Volunteer Team Leader, USAID University Center for Career Development.
+  \item \textbf{Languages:} Arabic (Native) \textperiodcentered\ English (Professional Working Proficiency) \textperiodcentered\ French (Basic). \quad \textbf{References available on request.}
+\end{cvitems}
+
+\vspace{3pt}
+{\color{navy}\rule{\linewidth}{0.8pt}}
+
+\end{document}

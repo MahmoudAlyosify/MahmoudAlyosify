@@ -1,0 +1,286 @@
+%% ============================================================
+%%  Mahmoud Alyosify - Targeted CV 2026
+%%  Compiler : XeLaTeX
+%%  Uses Arial if installed, otherwise falls back automatically
+%%  to TeX Gyre Heros (metric-compatible Helvetica clone).
+%% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% -- Packages -----------------------------------------------------------------
+\usepackage[a4paper, top=9mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Icons are optional: the CV still compiles (and stays ATS-readable) without them.
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{%
+  \newcommand{\faEnvelope}{}\newcommand{\faPhone}{}\newcommand{\faMapMarker}{}%
+  \newcommand{\faLinkedin}{}\newcommand{\faGithub}{}\newcommand{\faRobot}{}%
+  \newcommand{\faChartBar}{}\newcommand{\faGlobe}{}%
+}
+
+% -- Fonts --------------------------------------------------------------------
+% Common f-ligatures are disabled: they extract as single glyphs and break
+% keyword matching in ATS parsers.
+\defaultfontfeatures{Ligatures={TeX,NoCommon}}
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}\setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}%
+}
+
+% -- Colours ------------------------------------------------------------------
+\definecolor{navy}{HTML}{0D2137}
+\definecolor{teal}{HTML}{0A7E8C}
+\definecolor{darkgray}{HTML}{2C2C2C}
+\definecolor{midgray}{HTML}{555555}
+
+% -- Hyperlinks + PDF metadata (indexed by many ATS parsers) ------------------
+\hypersetup{
+  colorlinks  = true,
+  urlcolor    = teal,
+  linkcolor   = teal,
+  pdftitle    = {Mahmoud Alyosify - AI and Machine Learning Engineer - CV},
+  pdfauthor   = {Mahmoud Alyosify},
+  pdfsubject  = {Curriculum Vitae},
+  pdfkeywords = {AI Engineer, Machine Learning Engineer, Artificial Intelligence,
+                 Large Language Models, LLM, Fine-Tuning, LoRA, QLoRA, RAG,
+                 PyTorch, TensorFlow, Deep Learning, NLP, Computer Vision,
+                 Reinforcement Learning, MLOps, AWS, Docker, Python, SQL,
+                 Model Deployment, Inference Optimization, Data Science},
+  pdflang     = {en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+% -- Building blocks ----------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{navy}\rule{\linewidth}{1.1pt}}\\[0.5pt]%
+  {\color{navy}\bfseries\fontsize{9.5}{11}\selectfont\uppercase{#1}}\\[-4pt]%
+  {\color{teal}\rule{\linewidth}{0.6pt}}%
+  \vspace{2pt}%
+}
+
+% {Role or Degree}{Organisation}{Dates}{Location / detail}
+\newcommand{\cventry}[4]{%
+  \vspace{2.5pt}%
+  \textbf{\color{darkgray}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}} \hfill {\color{midgray}#4}%
+}
+
+% {Project title}{Context / tech stack}{Dates}
+\newcommand{\cvproject}[3]{%
+  \vspace{2.5pt}%
+  {\bfseries\color{navy}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}}%
+}
+
+% Compact one-line project entry (used inside a cvitems list)
+\newcommand{\cvmini}[2]{\item {\bfseries\color{navy}#1} --- #2}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=11pt, itemsep=0.5pt, parsep=0pt, topsep=1pt,
+                  label={\textcolor{teal}{$\bullet$}}]
+}{%
+  \end{itemize}%
+}
+
+\newenvironment{dualcol}{%
+  \begin{tabular*}{\linewidth}{@{}p{0.495\linewidth}@{\hspace{0.01\linewidth}}p{0.495\linewidth}@{}}
+}{%
+  \end{tabular*}%
+}
+
+%% ============================================================
+\begin{document}
+\small
+
+%% -- HEADER ------------------------------------------------------------------
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{3pt}
+\begin{center}
+  {\fontsize{21}{24}\bfseries\color{navy} Mahmoud Alyosify}\\[3pt]
+  {\fontsize{10}{12}\color{teal}
+    AI \& Machine Learning Engineer \enspace|\enspace LLM Systems, Applied ML \& Model Deployment
+    \enspace|\enspace MSc Artificial Intelligence, Queen's University
+}\\[4pt]
+  {\color{midgray}
+    \faEnvelope\ \href{mailto:mahmoud.alyosify@gmail.com}{mahmoud.alyosify@gmail.com}
+    \enspace|\enspace
+    \faPhone\ +20 114 555 7959
+    \enspace|\enspace
+    \faMapMarker\ New Cairo, Egypt \textperiodcentered\ Open to Relocation}\\[2pt]
+  {\faLinkedin\ \href{https://linkedin.com/in/mahmoudalyosify}{linkedin.com/in/mahmoudalyosify}
+    \enspace|\enspace
+    \faGithub\ \href{https://github.com/MahmoudAlyosify}{github.com/MahmoudAlyosify}
+    \enspace|\enspace
+    \faGlobe\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}
+    \enspace|\enspace
+    \faRobot\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face}
+    \enspace|\enspace
+    \faChartBar\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle}}
+\end{center}
+
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{2pt}
+
+%% -- SUMMARY -----------------------------------------------------------------
+\cvsection{Professional Summary}
+
+{\color{darkgray}\justifying
+AI \& Machine Learning Engineer who builds intelligent systems end to end --- from research question to a deployed, measured model. Completing an \textbf{MSc in Artificial Intelligence at Queen's University, Canada} (expected \textbf{Nov 2026}) on a \textbf{Digilians Presidential Scholarship}, with a master's research project on \textbf{training-free, decoding-time efficiency for large language models}. Core strengths in \textbf{LLM fine-tuning and inference optimisation}, \textbf{end-to-end ML pipelines} and \textbf{cloud deployment on AWS}, backed by rigorous, reproducible evaluation. Prior engineering experience on national-scale toll infrastructure, plus five years teaching AI and computer science to \textbf{10,000+ learners} (\textbf{700K+ views}). Open to AI/ML engineering roles internationally.}
+
+%% -- EDUCATION ---------------------------------------------------------------
+\cvsection{Education}
+
+\cventry{MSc in Artificial Intelligence}{Queen's University, Kingston, Ontario, Canada}
+        {Sep 2025 -- Nov 2026}{Cum GPA: 4.30 / 4.30}
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship} --- competitive national AI graduate fellowship.
+  \item \textbf{Master's Research Project (CISC 898):} \textit{Verbosity-Aware Decoding for Token-Efficient Language Model Inference} --- Supervisor: Dr.\ Rahatara Ferdousi.
+  \item Coursework: \textbf{Large Language Models, Generative AI, Deep Learning, Reinforcement Learning, Cloud Computing, End-to-End ML Pipelines}.
+\end{cvitems}
+
+\cventry{B.Sc.\ Computer \& Information Science (Bioinformatics)}{Assiut University, Egypt}
+        {Sep 2019 -- Jul 2023}{GPA: 3.53 / 4.00}
+\begin{cvitems}
+  \item Graduation Project: \href{https://vitalismsolution.github.io/}{\textbf{Vitalism Solution}} --- contactless vital-sign estimation from video via rPPG. \textbf{Grade A+}; \textbf{Semi-Finalist, Microsoft Imagine Cup 2023}.
+\end{cvitems}
+
+%% -- TECHNICAL SKILLS --------------------------------------------------------
+\cvsection{Technical Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\hyphenpenalty=10000\arraybackslash}p{35mm} X@{}}
+\textbf{AI \& LLM Systems} &
+Large Language Models, Fine-Tuning (LoRA, QLoRA, PEFT), RAG, Transformers, Hugging Face, LangChain, Prompt Engineering, Multi-Agent Systems, Agentic Workflows \\
+
+\textbf{ML \& Deep Learning} &
+PyTorch, TensorFlow, Scikit-learn, XGBoost, LightGBM, CNNs, Computer Vision, NLP, Self-Supervised \& Contrastive Learning, Reinforcement Learning (PPO, DQN), Optuna, SHAP \\
+
+\textbf{Data \& MLOps} &
+Pandas, NumPy, PySpark, ETL Pipelines, Feature Engineering, AWS, Docker, CI/CD, ONNX, FastAPI, Streamlit, FAISS, ChromaDB, MySQL, MongoDB, Git/GitHub, Linux \\
+
+\textbf{Evaluation} &
+Benchmarking (MT-Bench, XSum, SQuAD-v2), BERTScore, ROUGE, LLM-as-Judge, Statistical Testing, Ablation Studies, Reproducible Experiment Design \\
+
+\textbf{Programming} &
+Python, SQL, C++, C, C\#, Go, JavaScript, MATLAB, Bash \\
+\end{tabularx}
+
+%% -- WORK EXPERIENCE ---------------------------------------------------------
+\cvsection{Professional Experience}
+
+\cventry{Machine Learning Instructor}{National Telecommunication Institute (NTI)}
+        {Jul 2025 -- Sep 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Delivered a \textbf{90-hour} hands-on ML program for engineering and CS students covering supervised learning, PCA and neural networks, with practical lab sessions throughout.
+\end{cvitems}
+
+\cventry{AI in Cybersecurity Intern}{e\& Egypt --- via NTI (On-the-Job Training)}
+        {Jun 2025 -- Jul 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Applied AI-driven security tooling across threat intelligence, digital forensics and enterprise security analysis.
+\end{cvitems}
+
+\cventry{Systems Engineer (Military Service)}{National Company for Roads Building \& Development}
+        {Feb 2024 -- Mar 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Supported backend systems for national toll infrastructure serving \textbf{50\%+ of Egyptian vehicles} across \textbf{70\%+ of national roads}.
+  \item Co-developed an internal data-management and reporting desktop application in \textbf{C\#, .NET, Entity Framework, SQL Server} and \textbf{Crystal Reports}; supported and troubleshot legacy applications to minimise operational downtime.
+\end{cvitems}
+
+\cventry{Online Instructor --- AI, Algorithms \& Data Science}{Udemy \& YouTube}
+        {2020 -- Present}{Remote}
+\begin{cvitems}
+  \item Built and taught Arabic-language technical curricula (discrete mathematics, algorithms, probability \& statistics, graph data mining) reaching \textbf{10,000+ learners} and \textbf{700K+ YouTube views}.
+\end{cvitems}
+
+%% -- PROJECTS ----------------------------------------------------------------
+\cvsection{Selected Projects}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/minimal-lm}{Verbosity-Aware Decoding for Token-Efficient Language Model Inference}}
+          {MSc Research Project (CISC 898), Queen's University \textperiodcentered\ PyTorch \textperiodcentered\ Hugging Face \textperiodcentered\ AWS GPU}
+          {2026 -- Present}
+\begin{cvitems}
+  \item Designed a \textbf{training-free LogitsProcessor} that cuts generated tokens at \textbf{decoding time} using stop-token, n-gram-repetition and semantic-redundancy signals under an \textbf{entropy-driven gate} --- no retraining, no architecture change, no KV-cache overhead.
+  \item Validated across \textbf{three open-weight model families} (Mistral-7B, Llama-3.1-8B, Qwen2.5-3B) on \textbf{MT-Bench, XSum} and \textbf{SQuAD-v2}, measuring token reduction, latency (TTFT / inter-token) and \textbf{GPU energy} while proving semantic preservation through paired non-inferiority testing.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/horus-sentinel}{HORUS Sentinel --- Autonomous Multi-Agent OSINT \& Threat-Intelligence Platform}}
+          {Python \textperiodcentered\ Multi-Agent Systems \textperiodcentered\ Fine-Tuned LLM \textperiodcentered\ Knowledge Graphs \textperiodcentered\ Self-Hosted Inference}
+          {2026}
+\begin{cvitems}
+  \item Architected an autonomous intelligence analyst: a \textbf{swarm of specialised agents} continuously collects open-source intelligence and correlates findings into a \textbf{living knowledge graph}, over which a self-hosted fine-tuned LLM produces \textbf{prioritised, evidence-backed reports}.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/SimCLR-Vision-SSL}{SimCLR-Vision-SSL --- Self-Supervised Contrastive Representation Learning}}
+          {PyTorch \textperiodcentered\ SimCLR \textperiodcentered\ SupCon \textperiodcentered\ ONNX \textperiodcentered\ FAISS}
+          {2026}
+\begin{cvitems}
+  \item Built a self-supervised vision pipeline with a \textbf{42-experiment augmentation sweep}, a semi-supervised \textbf{SupCon} extension and deployment-ready \textbf{ONNX/FAISS} retrieval, reaching \textbf{84.30\% top-1 accuracy}.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/RL-Cloud-Autoscaler}{RL-Cloud-Autoscaler --- Cloud Resource Provisioning via Deep Reinforcement Learning}}
+          {Python \textperiodcentered\ PPO \textperiodcentered\ DQN \textperiodcentered\ Gymnasium \textperiodcentered\ Cost Optimisation}
+          {2026}
+\begin{cvitems}
+  \item Built a \textbf{custom Gymnasium environment} and trained \textbf{PPO} and \textbf{DQN} agents to optimise the \textbf{cost--latency trade-off} under fluctuating demand, benchmarked against static and threshold-based autoscaling baselines.
+\end{cvitems}
+
+\vspace{3pt}
+{\bfseries\color{navy}Additional Projects}
+\begin{cvitems}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/Horus-OSINT}{Horus-OSINT}}{fine-tuned \textbf{Meta-Llama-3-8B} on \textbf{159,826} GTD/GDELT records and deployed it on \textbf{AWS} as an interactive threat-intelligence assistant.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/Automated-Multimodal-Agent-PDF-to-Narrated-PowerPoint}{Automated Multimodal Agent}}{agentic workflow converting PDFs into narrated PowerPoint decks end to end.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/SCRAP-Satellite-Collision-Risk-Assessment-and-Prediction}{SCRAP}}{supervised ML pipeline predicting satellite collision risk \textbf{48+ hours} before closest approach.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/AudioShield}{AudioShield}}{CNN-based deepfake audio detection served through a Streamlit application.}
+  \item \textbf{Also:} Human vs.\ Agentic Pull Requests (GitHub mining) \textperiodcentered\ Vitalism Solution (rPPG) \textperiodcentered\ Diabetes Onset Prediction \textperiodcentered\ ATM Transaction Analysis \textperiodcentered\ E-Commerce Web App \textperiodcentered\ Mini-FAT File System.
+\end{cvitems}
+
+%% -- CERTIFICATIONS ----------------------------------------------------------
+\cvsection{Certifications}
+
+\begin{dualcol}
+  \textbf{AWS Academy} --- ML Foundations, ML for NLP, Data Engineering &
+  \textbf{Machine Learning Specialization} --- DeepLearning.AI \\[2pt]
+  \textbf{HCIP -- AI} (Huawei) &
+  \textbf{Microsoft Certified: Data Analyst Associate} \\[2pt]
+  \textbf{AI in Cybersecurity} --- NTI (420 hrs) &
+  \textbf{ML Internship} --- ITIDA / Egypt Makes Electronics (200 hrs) \\[2pt]
+  \textbf{Generative AI \& Prompt Engineering} --- IBM / Coursera &
+  \textbf{Full Stack Diploma} --- .NET \& Angular (Route Academy) \\
+\end{dualcol}
+
+%% -- ACHIEVEMENTS ------------------------------------------------------------
+\cvsection{Achievements \& Awards}
+
+\begin{dualcol}
+  \textbf{1st Place} --- Smart Cities Hackathon 2022 &
+  \textbf{Semi-Finalist} --- Microsoft Imagine Cup 2023 \\[2pt]
+  \textbf{Finalist} --- ISEIC 2023 &
+  \textbf{Ideal Student Award} --- Assiut University, 2022--2023 \\
+\end{dualcol}
+
+%% -- LEADERSHIP \& LANGUAGES -------------------------------------------------
+\cvsection{Leadership \& Languages}
+
+\begin{cvitems}
+  \item \textbf{Secretary}, Higher Scientific \& Technological Committee, Student Union, Assiut University \textperiodcentered\ \textbf{Ambassador}, Information Technology Institute (ITI), Assiut \textperiodcentered\ \textbf{Volunteer Team Leader}, USAID University Center for Career Development.
+  \item \textbf{Languages:} Arabic (Native) \textperiodcentered\ English (Professional Working Proficiency) \textperiodcentered\ French (Basic).
+\end{cvitems}
+
+\vspace{3pt}
+{\color{navy}\rule{\linewidth}{0.8pt}}
+
+\end{document}

@@ -1,0 +1,278 @@
+%% ============================================================
+%%  Mahmoud Alyosify - Targeted CV 2026
+%%  Compiler : XeLaTeX
+%%  Uses Arial if installed, otherwise falls back automatically
+%%  to TeX Gyre Heros (metric-compatible Helvetica clone).
+%% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% -- Packages -----------------------------------------------------------------
+\usepackage[a4paper, top=9mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Icons are optional: the CV still compiles (and stays ATS-readable) without them.
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{%
+  \newcommand{\faEnvelope}{}\newcommand{\faPhone}{}\newcommand{\faMapMarker}{}%
+  \newcommand{\faLinkedin}{}\newcommand{\faGithub}{}\newcommand{\faRobot}{}%
+  \newcommand{\faChartBar}{}\newcommand{\faGlobe}{}%
+}
+
+% -- Fonts --------------------------------------------------------------------
+% Common f-ligatures are disabled: they extract as single glyphs and break
+% keyword matching in ATS parsers.
+\defaultfontfeatures{Ligatures={TeX,NoCommon}}
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}\setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}%
+}
+
+% -- Colours ------------------------------------------------------------------
+\definecolor{navy}{HTML}{0D2137}
+\definecolor{teal}{HTML}{0A7E8C}
+\definecolor{darkgray}{HTML}{2C2C2C}
+\definecolor{midgray}{HTML}{555555}
+
+% -- Hyperlinks + PDF metadata (indexed by many ATS parsers) ------------------
+\hypersetup{
+  colorlinks  = true,
+  urlcolor    = teal,
+  linkcolor   = teal,
+  pdftitle    = {Mahmoud Alyosify - Edge and Efficient AI Engineer - CV},
+  pdfauthor   = {Mahmoud Alyosify},
+  pdfsubject  = {Curriculum Vitae},
+  pdfkeywords = {Edge AI Engineer, Embedded AI, Efficient AI, On-Device AI,
+                 Inference Optimization, Model Optimization, ONNX, ONNX Runtime,
+                 Quantization, QLoRA, 4-bit, Latency, Throughput, TTFT,
+                 Energy Efficiency, NVML, GPU Profiling, Model Deployment,
+                 PyTorch, C, C++, Python, Linux, Docker, Real-Time Systems},
+  pdflang     = {en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+% -- Building blocks ----------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{navy}\rule{\linewidth}{1.1pt}}\\[0.5pt]%
+  {\color{navy}\bfseries\fontsize{9.5}{11}\selectfont\uppercase{#1}}\\[-4pt]%
+  {\color{teal}\rule{\linewidth}{0.6pt}}%
+  \vspace{2pt}%
+}
+
+% {Role or Degree}{Organisation}{Dates}{Location / detail}
+\newcommand{\cventry}[4]{%
+  \vspace{2.5pt}%
+  \textbf{\color{darkgray}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}} \hfill {\color{midgray}#4}%
+}
+
+% {Project title}{Context / tech stack}{Dates}
+\newcommand{\cvproject}[3]{%
+  \vspace{2.5pt}%
+  {\bfseries\color{navy}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}}%
+}
+
+% Compact one-line project entry (used inside a cvitems list)
+\newcommand{\cvmini}[2]{\item {\bfseries\color{navy}#1} --- #2}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=11pt, itemsep=0.5pt, parsep=0pt, topsep=1pt,
+                  label={\textcolor{teal}{$\bullet$}}]
+}{%
+  \end{itemize}%
+}
+
+\newenvironment{dualcol}{%
+  \begin{tabular*}{\linewidth}{@{}p{0.495\linewidth}@{\hspace{0.01\linewidth}}p{0.495\linewidth}@{}}
+}{%
+  \end{tabular*}%
+}
+
+%% ============================================================
+\begin{document}
+\small
+
+%% -- HEADER ------------------------------------------------------------------
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{3pt}
+\begin{center}
+  {\fontsize{21}{24}\bfseries\color{navy} Mahmoud Alyosify}\\[3pt]
+  {\fontsize{10}{12}\color{teal}
+    Specialised Edge \& Efficient AI Engineer \enspace|\enspace Inference Optimisation, Latency \& Energy-Aware Deployment
+    \enspace|\enspace MSc Artificial Intelligence, Queen's University (Canada)
+}\\[4pt]
+  {\color{midgray}
+    \faEnvelope\ \href{mailto:mahmoud.alyosify@gmail.com}{mahmoud.alyosify@gmail.com}
+    \enspace|\enspace
+    \faPhone\ +20 114 555 7959
+    \enspace|\enspace
+    \faMapMarker\ New Cairo, Egypt \textperiodcentered\ Open to Relocation}\\[2pt]
+  {\faLinkedin\ \href{https://linkedin.com/in/mahmoudalyosify}{linkedin.com/in/mahmoudalyosify}
+    \enspace|\enspace
+    \faGithub\ \href{https://github.com/MahmoudAlyosify}{github.com/MahmoudAlyosify}
+    \enspace|\enspace
+    \faGlobe\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}
+    \enspace|\enspace
+    \faRobot\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face}
+    \enspace|\enspace
+    \faChartBar\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle}}
+\end{center}
+
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{2pt}
+
+%% -- SUMMARY -----------------------------------------------------------------
+\cvsection{Professional Summary}
+
+{\color{darkgray}\justifying
+Efficient-AI Engineer whose entire focus is the constraint most ML work ignores: \textbf{making models cheap enough to actually run}. Master's research at \textbf{Queen's University, Canada} (expected \textbf{Nov 2026}, \textbf{Digilians Presidential Scholarship}) delivers a \textbf{training-free, zero-overhead decoding method} that cuts generated tokens across three model families while measuring \textbf{TTFT, inter-token latency and GPU energy through NVML} --- efficiency treated as a measured result, not a claim. Practical deployment experience with \textbf{ONNX export and FAISS-backed inference}, \textbf{4-bit quantised fine-tuning (QLoRA)}, \textbf{self-hosted model serving}, and \textbf{deep-RL resource provisioning under cost--latency budgets}. Systems background in \textbf{C/C++ and real-time national toll infrastructure}, plus a \textbf{200-hour ML internship with ITIDA / Egypt Makes Electronics}. Seeking edge, on-device and inference-optimisation engineering roles.}
+
+%% -- EDUCATION ---------------------------------------------------------------
+\cvsection{Education}
+
+\cventry{MSc in Artificial Intelligence}{Queen's University, Kingston, Ontario, Canada}
+        {Sep 2025 -- Nov 2026}{Expected Nov 2026}
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship} --- competitive national AI graduate fellowship.
+  \item \textbf{Master's Research Project (CISC 898):} \textit{Verbosity-Aware Decoding for Token-Efficient Language Model Inference} --- Supervisor: Dr.\ Rahatara Ferdousi.
+  \item Coursework: \textbf{Large Language Models, Deep Learning, Cloud Computing, Reinforcement Learning, End-to-End ML Pipelines}.
+\end{cvitems}
+
+\cventry{B.Sc.\ Computer \& Information Science (Bioinformatics)}{Assiut University, Egypt}
+        {Sep 2019 -- Jul 2023}{GPA: 3.53 / 4.00}
+\begin{cvitems}
+  \item Graduation Project: \href{https://vitalismsolution.github.io/}{\textbf{Vitalism Solution}} --- real-time contactless vital-sign estimation from video (rPPG). \textbf{Grade A+}; \textbf{Semi-Finalist, Microsoft Imagine Cup 2023}.
+\end{cvitems}
+
+%% -- TECHNICAL SKILLS --------------------------------------------------------
+\cvsection{Technical Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\hyphenpenalty=10000\arraybackslash}p{35mm} X@{}}
+\textbf{Inference Optimisation} &
+Decoding-Time Token Reduction, Custom LogitsProcessors, Entropy-Based Gating, KV-Cache-Free Methods, Quantised Fine-Tuning (QLoRA / 4-bit), PEFT / LoRA Adapters, Self-Hosted Model Serving \\
+
+\textbf{Profiling \& Measurement} &
+Time-to-First-Token (TTFT), Inter-Token Latency, Throughput Benchmarking, \textbf{GPU Energy Measurement via NVML}, Deterministic Benchmarking on Pinned Hardware, Cost--Latency Trade-off Analysis \\
+
+\textbf{Deployment Runtimes} &
+ONNX, FAISS Vector Search, Docker, FastAPI, Streamlit, AWS GPU Instances, Linux, CI/CD \\
+
+\textbf{ML \& Deep Learning} &
+PyTorch, TensorFlow, Hugging Face Transformers, CNNs, Self-Supervised \& Contrastive Learning, Reinforcement Learning (PPO, DQN), Scikit-learn, Optuna \\
+
+\textbf{Systems \& Low-Level} &
+C, C++, Real-Time Application Support, File-System Implementation (Mini-FAT), Embedded-Oriented ML Training (ITIDA / Egypt Makes Electronics, 200 hrs), Git/GitHub, Bash \\
+
+\textbf{Programming} &
+Python, C, C++, C\#, SQL, Go, MATLAB, Bash \\
+\end{tabularx}
+
+%% -- PROJECTS ----------------------------------------------------------------
+\cvsection{Selected Efficiency \& Deployment Projects}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/minimal-lm}{Verbosity-Aware Decoding --- Zero-Overhead Token Reduction at Inference Time}}
+          {MSc Research Project (CISC 898), Queen's University \textperiodcentered\ PyTorch \textperiodcentered\ NVML \textperiodcentered\ AWS GPU}
+          {2026 -- Present}
+\begin{cvitems}
+  \item Built a \textbf{training-free LogitsProcessor} that cuts generated tokens at \textbf{decoding time} --- \textbf{no retraining, no architecture change, no extra KV-cache or attention cost} --- fusing stop-token, n-gram-repetition and semantic-redundancy signals under an \textbf{entropy-driven gate}.
+  \item Instrumented the full efficiency picture rather than token count alone: \textbf{TTFT}, \textbf{inter-token latency} and \textbf{GPU energy draw via NVML}, all captured under deterministic runs on \textbf{pinned AWS GPU instances}.
+  \item Proved the savings are not bought with quality loss, using \textbf{paired non-inferiority testing} (BERTScore, ROUGE, exact-match/F1, length-controlled LLM judge) across \textbf{Mistral-7B, Llama-3.1-8B} and \textbf{Qwen2.5-3B} on MT-Bench, XSum and SQuAD-v2.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/SimCLR-Vision-SSL}{SimCLR-Vision-SSL --- From Trained Encoder to ONNX Retrieval Service}}
+          {PyTorch \textperiodcentered\ SimCLR \textperiodcentered\ SupCon \textperiodcentered\ ONNX \textperiodcentered\ FAISS}
+          {2026}
+\begin{cvitems}
+  \item Exported a self-supervised vision encoder to \textbf{ONNX} and served its embeddings through a \textbf{FAISS} index, turning a research model into a runnable, framework-independent retrieval component.
+  \item Reached \textbf{84.30\% top-1 accuracy} after a \textbf{42-experiment augmentation sweep} plus a semi-supervised \textbf{SupCon} extension.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/RL-Cloud-Autoscaler}{RL-Cloud-Autoscaler --- Learned Provisioning Under a Cost--Latency Budget}}
+          {PPO \textperiodcentered\ DQN \textperiodcentered\ Custom Gymnasium Environment \textperiodcentered\ Resource Optimisation}
+          {2026}
+\begin{cvitems}
+  \item Built a custom simulation environment and trained \textbf{PPO} and \textbf{DQN} agents to allocate compute under an explicit \textbf{cost--latency reward}, benchmarked against static and threshold-based policies.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/Horus-OSINT}{Horus-OSINT --- Quantised Fine-Tuning \& Self-Hosted Serving}}
+          {Meta-Llama-3-8B \textperiodcentered\ Fine-Tuning \textperiodcentered\ AWS \textperiodcentered\ Self-Hosted Inference}
+          {2026}
+\begin{cvitems}
+  \item Fine-tuned \textbf{Meta-Llama-3-8B} on \textbf{159,826} records and deployed it on \textbf{AWS} for self-hosted interactive inference --- keeping model weights and data in-environment rather than calling a hosted API.
+\end{cvitems}
+
+\vspace{3pt}
+{\bfseries\color{navy}Additional Projects}
+\begin{cvitems}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/AudioShield}{AudioShield}}{compact \textbf{CNN} over mel-spectrograms delivering real-time audio classification through a lightweight served application.}
+  \cvmini{\href{https://vitalismsolution.github.io/}{Vitalism Solution}}{real-time video signal processing (rPPG + wavelet filtering) for contactless vital-sign estimation from a standard camera.}
+  \item \textbf{Also:} Mini-FAT File System (C, low-level systems) \textperiodcentered\ HORUS Sentinel (multi-agent, self-hosted LLM) \textperiodcentered\ SCRAP \textperiodcentered\ Automated Multimodal Agent.
+\end{cvitems}
+
+%% -- WORK EXPERIENCE ---------------------------------------------------------
+\cvsection{Professional Experience}
+
+\cventry{Systems Engineer (Military Service)}{National Company for Roads Building \& Development}
+        {Feb 2024 -- Mar 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Supported \textbf{real-time backend systems} for national toll infrastructure serving \textbf{50\%+ of Egyptian vehicles} across \textbf{70\%+ of national roads}, where latency and uptime were operational requirements, not metrics on a dashboard.
+  \item Debugged and optimised live transportation software and supported legacy applications to minimise downtime; co-developed an internal data-management application in \textbf{C\#, .NET, Entity Framework, SQL Server}.
+\end{cvitems}
+
+\cventry{Machine Learning Instructor}{National Telecommunication Institute (NTI)}
+        {Jul 2025 -- Sep 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Delivered a \textbf{90-hour} hands-on ML program covering supervised learning, PCA and neural networks with practical labs.
+\end{cvitems}
+
+\cventry{AI in Cybersecurity Intern}{e\& Egypt --- via NTI (On-the-Job Training)}
+        {Jun 2025 -- Jul 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Applied AI-driven security tooling across threat intelligence, digital forensics and enterprise security analysis.
+\end{cvitems}
+
+\cventry{Online Instructor --- AI, Algorithms \& Data Science}{Udemy \& YouTube}
+        {2020 -- Present}{Remote}
+\begin{cvitems}
+  \item Built Arabic-language technical curricula reaching \textbf{10,000+ learners} and \textbf{700K+ YouTube views}.
+\end{cvitems}
+
+%% -- CERTIFICATIONS ----------------------------------------------------------
+\cvsection{Certifications \& Awards}
+
+\begin{dualcol}
+  \textbf{ML Internship} --- ITIDA / Egypt Makes Electronics (200 hrs) &
+  \textbf{AWS Academy} --- ML Foundations, ML for NLP, Data Engineering \\[2pt]
+  \textbf{Machine Learning Specialization} --- DeepLearning.AI &
+  \textbf{HCIP -- AI} (Huawei) \\[2pt]
+  \textbf{Digilians Presidential Scholarship} --- Queen's University &
+  \textbf{1st Place} --- Smart Cities Hackathon 2022 \\[2pt]
+  \textbf{Semi-Finalist} --- Microsoft Imagine Cup 2023 &
+  \textbf{Ideal Student Award} --- Assiut University, 2022--2023 \\
+\end{dualcol}
+
+%% -- LANGUAGES ---------------------------------------------------------------
+\cvsection{Languages}
+
+\begin{cvitems}
+  \item \textbf{Arabic:} Native \textperiodcentered\ \textbf{English:} Professional Working Proficiency \textperiodcentered\ \textbf{French:} Basic.
+\end{cvitems}
+
+\vspace{3pt}
+{\color{navy}\rule{\linewidth}{0.8pt}}
+
+\end{document}

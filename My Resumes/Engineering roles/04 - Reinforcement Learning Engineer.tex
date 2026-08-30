@@ -1,0 +1,269 @@
+%% ============================================================
+%%  Mahmoud Alyosify - Targeted CV 2026
+%%  Compiler : XeLaTeX
+%%  Uses Arial if installed, otherwise falls back automatically
+%%  to TeX Gyre Heros (metric-compatible Helvetica clone).
+%% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% -- Packages -----------------------------------------------------------------
+\usepackage[a4paper, top=9mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Icons are optional: the CV still compiles (and stays ATS-readable) without them.
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{%
+  \newcommand{\faEnvelope}{}\newcommand{\faPhone}{}\newcommand{\faMapMarker}{}%
+  \newcommand{\faLinkedin}{}\newcommand{\faGithub}{}\newcommand{\faRobot}{}%
+  \newcommand{\faChartBar}{}\newcommand{\faGlobe}{}%
+}
+
+% -- Fonts --------------------------------------------------------------------
+% Common f-ligatures are disabled: they extract as single glyphs and break
+% keyword matching in ATS parsers.
+\defaultfontfeatures{Ligatures={TeX,NoCommon}}
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}\setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}%
+}
+
+% -- Colours ------------------------------------------------------------------
+\definecolor{navy}{HTML}{0D2137}
+\definecolor{teal}{HTML}{0A7E8C}
+\definecolor{darkgray}{HTML}{2C2C2C}
+\definecolor{midgray}{HTML}{555555}
+
+% -- Hyperlinks + PDF metadata (indexed by many ATS parsers) ------------------
+\hypersetup{
+  colorlinks  = true,
+  urlcolor    = teal,
+  linkcolor   = teal,
+  pdftitle    = {Mahmoud Alyosify - Reinforcement Learning Engineer - CV},
+  pdfauthor   = {Mahmoud Alyosify},
+  pdfsubject  = {Curriculum Vitae},
+  pdfkeywords = {Reinforcement Learning Engineer, Deep Reinforcement Learning, RL,
+                 PPO, Proximal Policy Optimization, DQN, Deep Q-Network, Gymnasium,
+                 Policy Optimization, Reward Design, Environment Design, Simulation,
+                 Sequential Decision Making, Control, Resource Optimization,
+                 PyTorch, Python, AWS, Multi-Agent Systems},
+  pdflang     = {en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+% -- Building blocks ----------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{navy}\rule{\linewidth}{1.1pt}}\\[0.5pt]%
+  {\color{navy}\bfseries\fontsize{9.5}{11}\selectfont\uppercase{#1}}\\[-4pt]%
+  {\color{teal}\rule{\linewidth}{0.6pt}}%
+  \vspace{2pt}%
+}
+
+% {Role or Degree}{Organisation}{Dates}{Location / detail}
+\newcommand{\cventry}[4]{%
+  \vspace{2.5pt}%
+  \textbf{\color{darkgray}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}} \hfill {\color{midgray}#4}%
+}
+
+% {Project title}{Context / tech stack}{Dates}
+\newcommand{\cvproject}[3]{%
+  \vspace{2.5pt}%
+  {\bfseries\color{navy}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}}%
+}
+
+% Compact one-line project entry (used inside a cvitems list)
+\newcommand{\cvmini}[2]{\item {\bfseries\color{navy}#1} --- #2}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=11pt, itemsep=0.5pt, parsep=0pt, topsep=1pt,
+                  label={\textcolor{teal}{$\bullet$}}]
+}{%
+  \end{itemize}%
+}
+
+\newenvironment{dualcol}{%
+  \begin{tabular*}{\linewidth}{@{}p{0.495\linewidth}@{\hspace{0.01\linewidth}}p{0.495\linewidth}@{}}
+}{%
+  \end{tabular*}%
+}
+
+%% ============================================================
+\begin{document}
+\small
+
+%% -- HEADER ------------------------------------------------------------------
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{3pt}
+\begin{center}
+  {\fontsize{21}{24}\bfseries\color{navy} Mahmoud Alyosify}\\[3pt]
+  {\fontsize{10}{12}\color{teal}
+    Specialised Reinforcement Learning Engineer \enspace|\enspace Deep RL for Sequential Decision-Making \& Resource Optimisation
+    \enspace|\enspace MSc Artificial Intelligence, Queen's University (Canada)
+}\\[4pt]
+  {\color{midgray}
+    \faEnvelope\ \href{mailto:mahmoud.alyosify@gmail.com}{mahmoud.alyosify@gmail.com}
+    \enspace|\enspace
+    \faPhone\ +20 114 555 7959
+    \enspace|\enspace
+    \faMapMarker\ New Cairo, Egypt \textperiodcentered\ Open to Relocation}\\[2pt]
+  {\faLinkedin\ \href{https://linkedin.com/in/mahmoudalyosify}{linkedin.com/in/mahmoudalyosify}
+    \enspace|\enspace
+    \faGithub\ \href{https://github.com/MahmoudAlyosify}{github.com/MahmoudAlyosify}
+    \enspace|\enspace
+    \faGlobe\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}
+    \enspace|\enspace
+    \faRobot\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face}
+    \enspace|\enspace
+    \faChartBar\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle}}
+\end{center}
+
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{2pt}
+
+%% -- SUMMARY -----------------------------------------------------------------
+\cvsection{Professional Summary}
+
+{\color{darkgray}\justifying
+Reinforcement Learning Engineer building agents that make \textbf{sequential decisions under uncertainty with real cost consequences}. Designed a \textbf{custom Gymnasium environment} modelling cloud workload dynamics and trained \textbf{PPO} and \textbf{DQN} agents to optimise a \textbf{cost--latency reward}, benchmarked honestly against static and threshold-based baselines rather than against a weak strawman. Completing an \textbf{MSc in Artificial Intelligence at Queen's University, Canada} (expected \textbf{Nov 2026}) on a \textbf{Digilians Presidential Scholarship}, with graduate coursework in \textbf{Reinforcement Learning, Deep Learning and Cloud Computing}. Complementary experience in \textbf{multi-agent orchestration} and \textbf{decoding-time policies for language models}, plus national-scale systems engineering. Seeking RL roles in control, resource optimisation, simulation and agentic decision systems.}
+
+%% -- EDUCATION ---------------------------------------------------------------
+\cvsection{Education}
+
+\cventry{MSc in Artificial Intelligence}{Queen's University, Kingston, Ontario, Canada}
+        {Sep 2025 -- Nov 2026}{Expected Nov 2026}
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship} --- competitive national AI graduate fellowship.
+  \item Coursework: \textbf{Reinforcement Learning, Deep Learning, Cloud Computing, Large Language Models, End-to-End ML Pipelines}.
+  \item \textbf{Master's Research Project (CISC 898):} decoding-time control policies for token-efficient language-model inference --- Supervisor: Dr.\ Rahatara Ferdousi.
+\end{cvitems}
+
+\cventry{B.Sc.\ Computer \& Information Science (Bioinformatics)}{Assiut University, Egypt}
+        {Sep 2019 -- Jul 2023}{GPA: 3.53 / 4.00}
+\begin{cvitems}
+  \item Graduation Project: \href{https://vitalismsolution.github.io/}{\textbf{Vitalism Solution}} --- \textbf{Grade A+}; \textbf{Semi-Finalist, Microsoft Imagine Cup 2023}.
+\end{cvitems}
+
+%% -- TECHNICAL SKILLS --------------------------------------------------------
+\cvsection{Technical Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\hyphenpenalty=10000\arraybackslash}p{35mm} X@{}}
+\textbf{Reinforcement Learning} &
+Deep Reinforcement Learning, PPO, DQN, Policy-Gradient \& Value-Based Methods, Custom Gymnasium Environment Design, Reward Shaping, Exploration--Exploitation Trade-offs, Multi-Objective Reward Design, Baseline Benchmarking, Policy Evaluation \\
+
+\textbf{Simulation \& Systems} &
+Workload Simulation, Cloud Resource Provisioning, Cost--Latency Optimisation, Autoscaling Policies, Multi-Agent Systems, Agentic Workflows \\
+
+\textbf{Deep Learning} &
+PyTorch, TensorFlow, CNNs, Transformers, Self-Supervised \& Contrastive Learning, Fine-Tuning (LoRA, QLoRA), Optuna Hyperparameter Search \\
+
+\textbf{Engineering \& MLOps} &
+Python, NumPy, Pandas, AWS, Docker, FastAPI, ONNX, CI/CD, Git/GitHub, Linux, Reproducible Experiment Design, Latency \& Energy Profiling \\
+
+\textbf{Programming} &
+Python, C++, C, SQL, C\#, Go, MATLAB, Bash \\
+\end{tabularx}
+
+%% -- PROJECTS ----------------------------------------------------------------
+\cvsection{Selected Reinforcement Learning Projects}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/RL-Cloud-Autoscaler}{RL-Cloud-Autoscaler --- Autonomous Cloud Resource Provisioning via Deep RL}}
+          {Python \textperiodcentered\ PPO \textperiodcentered\ DQN \textperiodcentered\ Gymnasium \textperiodcentered\ Cloud Cost Optimisation}
+          {2026}
+\begin{cvitems}
+  \item Designed and implemented a \textbf{custom Gymnasium environment} simulating cloud workload dynamics --- defining the state space, discrete provisioning action space and episode structure from scratch.
+  \item Engineered a \textbf{multi-objective reward} capturing the \textbf{cost--latency trade-off}, so the agent is penalised for both over-provisioning spend and SLA-breaching latency.
+  \item Trained and tuned \textbf{PPO} (policy-gradient) and \textbf{DQN} (value-based) agents, comparing sample efficiency, stability and final policy behaviour under fluctuating demand.
+  \item Benchmarked both agents against \textbf{static allocation} and \textbf{reactive threshold-based autoscaling} baselines --- the policies real infrastructure teams actually run --- to quantify genuine improvement.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/minimal-lm}{Verbosity-Aware Decoding --- Learned Stopping Policy for LLM Inference}}
+          {MSc Research Project (CISC 898), Queen's University \textperiodcentered\ Sequential Decision-Making \textperiodcentered\ PyTorch}
+          {2026 -- Present}
+\begin{cvitems}
+  \item Formulated generation as a \textbf{step-by-step control problem}: at every decoding step an \textbf{entropy-driven gate} decides whether to continue or terminate, fusing stop-token, n-gram-repetition and semantic-redundancy signals --- training-free, with no architecture change.
+  \item Evaluated the resulting policy across \textbf{three model families} (Mistral-7B, Llama-3.1-8B, Qwen2.5-3B) on \textbf{MT-Bench, XSum} and \textbf{SQuAD-v2}, measuring the reward-relevant trade-off directly: token savings and latency against a non-inferiority bound on output quality.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/horus-sentinel}{HORUS Sentinel --- Autonomous Multi-Agent Intelligence Platform}}
+          {Multi-Agent Systems \textperiodcentered\ Autonomous Agents \textperiodcentered\ Knowledge Graphs \textperiodcentered\ Self-Hosted LLM}
+          {2026}
+\begin{cvitems}
+  \item Architected a \textbf{swarm of specialised autonomous agents} that continuously act on an environment of open data sources, coordinating through a shared knowledge graph rather than a central controller.
+\end{cvitems}
+
+\vspace{3pt}
+{\bfseries\color{navy}Additional Projects}
+\begin{cvitems}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/SCRAP-Satellite-Collision-Risk-Assessment-and-Prediction}{SCRAP}}{risk-prediction pipeline supporting time-critical decisions, forecasting satellite collision risk \textbf{48+ hours} before closest approach.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/SimCLR-Vision-SSL}{SimCLR-Vision-SSL}}{self-supervised representation learning with a \textbf{42-experiment} sweep, \textbf{84.30\% top-1}, ONNX/FAISS deployment.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/Horus-OSINT}{Horus-OSINT}}{fine-tuned \textbf{Meta-Llama-3-8B} on \textbf{159,826} records and deployed it on AWS.}
+  \item \textbf{Also:} Automated Multimodal Agent \textperiodcentered\ AudioShield \textperiodcentered\ Vitalism Solution (rPPG).
+\end{cvitems}
+
+%% -- WORK EXPERIENCE ---------------------------------------------------------
+\cvsection{Professional Experience}
+
+\cventry{Machine Learning Instructor}{National Telecommunication Institute (NTI)}
+        {Jul 2025 -- Sep 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Delivered a \textbf{90-hour} hands-on ML program covering supervised learning, PCA and neural networks, with practical lab sessions throughout.
+\end{cvitems}
+
+\cventry{AI in Cybersecurity Intern}{e\& Egypt --- via NTI (On-the-Job Training)}
+        {Jun 2025 -- Jul 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Applied AI-driven security tooling across threat intelligence, digital forensics and enterprise security analysis.
+\end{cvitems}
+
+\cventry{Systems Engineer (Military Service)}{National Company for Roads Building \& Development}
+        {Feb 2024 -- Mar 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Supported backend systems for national toll infrastructure serving \textbf{50\%+ of Egyptian vehicles} across \textbf{70\%+ of national roads}; debugged and optimised real-time transportation software.
+\end{cvitems}
+
+\cventry{Online Instructor --- AI, Algorithms \& Data Science}{Udemy \& YouTube}
+        {2020 -- Present}{Remote}
+\begin{cvitems}
+  \item Built Arabic-language technical curricula reaching \textbf{10,000+ learners} and \textbf{700K+ YouTube views}.
+\end{cvitems}
+
+%% -- CERTIFICATIONS ----------------------------------------------------------
+\cvsection{Certifications \& Awards}
+
+\begin{dualcol}
+  \textbf{Machine Learning Specialization} --- DeepLearning.AI &
+  \textbf{AWS Academy} --- ML Foundations, ML for NLP, Data Engineering \\[2pt]
+  \textbf{HCIP -- AI} (Huawei) &
+  \textbf{ML Internship} --- ITIDA / Egypt Makes Electronics (200 hrs) \\[2pt]
+  \textbf{Digilians Presidential Scholarship} --- Queen's University &
+  \textbf{1st Place} --- Smart Cities Hackathon 2022 \\[2pt]
+  \textbf{Semi-Finalist} --- Microsoft Imagine Cup 2023 &
+  \textbf{Ideal Student Award} --- Assiut University, 2022--2023 \\
+\end{dualcol}
+
+%% -- LANGUAGES ---------------------------------------------------------------
+\cvsection{Languages}
+
+\begin{cvitems}
+  \item \textbf{Arabic:} Native \textperiodcentered\ \textbf{English:} Professional Working Proficiency \textperiodcentered\ \textbf{French:} Basic.
+\end{cvitems}
+
+\vspace{3pt}
+{\color{navy}\rule{\linewidth}{0.8pt}}
+
+\end{document}

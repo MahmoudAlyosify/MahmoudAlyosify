@@ -1,0 +1,277 @@
+%% ============================================================
+%%  Mahmoud Alyosify - Targeted CV 2026
+%%  Compiler : XeLaTeX
+%%  Uses Arial if installed, otherwise falls back automatically
+%%  to TeX Gyre Heros (metric-compatible Helvetica clone).
+%% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% -- Packages -----------------------------------------------------------------
+\usepackage[a4paper, top=9mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Icons are optional: the CV still compiles (and stays ATS-readable) without them.
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{%
+  \newcommand{\faEnvelope}{}\newcommand{\faPhone}{}\newcommand{\faMapMarker}{}%
+  \newcommand{\faLinkedin}{}\newcommand{\faGithub}{}\newcommand{\faRobot}{}%
+  \newcommand{\faChartBar}{}\newcommand{\faGlobe}{}%
+}
+
+% -- Fonts --------------------------------------------------------------------
+% Common f-ligatures are disabled: they extract as single glyphs and break
+% keyword matching in ATS parsers.
+\defaultfontfeatures{Ligatures={TeX,NoCommon}}
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}\setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}%
+}
+
+% -- Colours ------------------------------------------------------------------
+\definecolor{navy}{HTML}{0D2137}
+\definecolor{teal}{HTML}{0A7E8C}
+\definecolor{darkgray}{HTML}{2C2C2C}
+\definecolor{midgray}{HTML}{555555}
+
+% -- Hyperlinks + PDF metadata (indexed by many ATS parsers) ------------------
+\hypersetup{
+  colorlinks  = true,
+  urlcolor    = teal,
+  linkcolor   = teal,
+  pdftitle    = {Mahmoud Alyosify - LLM and Generative AI Engineer - CV},
+  pdfauthor   = {Mahmoud Alyosify},
+  pdfsubject  = {Curriculum Vitae},
+  pdfkeywords = {LLM Engineer, Large Language Models, Generative AI Engineer,
+                 Fine-Tuning, LoRA, QLoRA, PEFT, RAG, Retrieval Augmented Generation,
+                 Prompt Engineering, Transformers, Hugging Face, LangChain,
+                 Inference Optimization, Decoding, Quantization, vLLM, Evaluation,
+                 LLM-as-Judge, BERTScore, ROUGE, PyTorch, AWS, Docker, Python},
+  pdflang     = {en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+% -- Building blocks ----------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{navy}\rule{\linewidth}{1.1pt}}\\[0.5pt]%
+  {\color{navy}\bfseries\fontsize{9.5}{11}\selectfont\uppercase{#1}}\\[-4pt]%
+  {\color{teal}\rule{\linewidth}{0.6pt}}%
+  \vspace{2pt}%
+}
+
+% {Role or Degree}{Organisation}{Dates}{Location / detail}
+\newcommand{\cventry}[4]{%
+  \vspace{2.5pt}%
+  \textbf{\color{darkgray}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}} \hfill {\color{midgray}#4}%
+}
+
+% {Project title}{Context / tech stack}{Dates}
+\newcommand{\cvproject}[3]{%
+  \vspace{2.5pt}%
+  {\bfseries\color{navy}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}}%
+}
+
+% Compact one-line project entry (used inside a cvitems list)
+\newcommand{\cvmini}[2]{\item {\bfseries\color{navy}#1} --- #2}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=11pt, itemsep=0.5pt, parsep=0pt, topsep=1pt,
+                  label={\textcolor{teal}{$\bullet$}}]
+}{%
+  \end{itemize}%
+}
+
+\newenvironment{dualcol}{%
+  \begin{tabular*}{\linewidth}{@{}p{0.495\linewidth}@{\hspace{0.01\linewidth}}p{0.495\linewidth}@{}}
+}{%
+  \end{tabular*}%
+}
+
+%% ============================================================
+\begin{document}
+\small
+
+%% -- HEADER ------------------------------------------------------------------
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{3pt}
+\begin{center}
+  {\fontsize{21}{24}\bfseries\color{navy} Mahmoud Alyosify}\\[3pt]
+  {\fontsize{10}{12}\color{teal}
+    Specialised LLM \& Generative AI Engineer \enspace|\enspace Fine-Tuning, RAG \& Inference Optimisation
+    \enspace|\enspace MSc Artificial Intelligence, Queen's University (Canada)
+}\\[4pt]
+  {\color{midgray}
+    \faEnvelope\ \href{mailto:mahmoud.alyosify@gmail.com}{mahmoud.alyosify@gmail.com}
+    \enspace|\enspace
+    \faPhone\ +20 114 555 7959
+    \enspace|\enspace
+    \faMapMarker\ New Cairo, Egypt \textperiodcentered\ Open to Relocation}\\[2pt]
+  {\faLinkedin\ \href{https://linkedin.com/in/mahmoudalyosify}{linkedin.com/in/mahmoudalyosify}
+    \enspace|\enspace
+    \faGithub\ \href{https://github.com/MahmoudAlyosify}{github.com/MahmoudAlyosify}
+    \enspace|\enspace
+    \faGlobe\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}
+    \enspace|\enspace
+    \faRobot\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face}
+    \enspace|\enspace
+    \faChartBar\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle}}
+\end{center}
+
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{2pt}
+
+%% -- SUMMARY -----------------------------------------------------------------
+\cvsection{Professional Summary}
+
+{\color{darkgray}\justifying
+LLM \& Generative AI Engineer specialising in \textbf{fine-tuning, retrieval-augmented generation and inference-time optimisation} of open-weight language models. Completing an \textbf{MSc in Artificial Intelligence at Queen's University, Canada} (expected \textbf{Nov 2026}) on a \textbf{Digilians Presidential Scholarship}; master's research delivers a \textbf{training-free decoding-time method} that reduces generated tokens across \textbf{Mistral, Llama-3.1 and Qwen2.5} while proving semantic preservation under a pre-registered non-inferiority protocol. Hands-on with \textbf{LoRA/QLoRA fine-tuning at 159K-record scale}, self-hosted inference, LLM evaluation (BERTScore, ROUGE, LLM-as-Judge) and AWS GPU deployment. Focused on making language-model systems \textbf{cheaper, faster and measurably reliable} in production.}
+
+%% -- EDUCATION ---------------------------------------------------------------
+\cvsection{Education}
+
+\cventry{MSc in Artificial Intelligence}{Queen's University, Kingston, Ontario, Canada}
+        {Sep 2025 -- Nov 2026}{Expected Nov 2026}
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship} --- competitive national AI graduate fellowship.
+  \item \textbf{Master's Research Project (CISC 898):} \textit{Verbosity-Aware Decoding for Token-Efficient Language Model Inference} --- Supervisor: Dr.\ Rahatara Ferdousi.
+  \item Coursework: \textbf{Large Language Models, Generative AI, Deep Learning, Cloud Computing, End-to-End ML Pipelines}.
+\end{cvitems}
+
+\cventry{B.Sc.\ Computer \& Information Science (Bioinformatics)}{Assiut University, Egypt}
+        {Sep 2019 -- Jul 2023}{GPA: 3.53 / 4.00}
+\begin{cvitems}
+  \item Graduation Project: \href{https://vitalismsolution.github.io/}{\textbf{Vitalism Solution}} --- \textbf{Grade A+}; \textbf{Semi-Finalist, Microsoft Imagine Cup 2023}.
+\end{cvitems}
+
+%% -- TECHNICAL SKILLS --------------------------------------------------------
+\cvsection{Technical Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\hyphenpenalty=10000\arraybackslash}p{35mm} X@{}}
+\textbf{LLM \& Generative AI} &
+Large Language Models, Instruction Fine-Tuning, LoRA, QLoRA, PEFT, RAG, Custom Decoding Strategies, LogitsProcessors, Sampling \& Entropy-Based Gating, Prompt Engineering, Structured Outputs, Tool / Function Calling, Multi-Agent Systems \\
+
+\textbf{Frameworks \& Serving} &
+PyTorch, Hugging Face Transformers, PEFT, Datasets, Accelerate, LangChain, FAISS, ChromaDB, ONNX, FastAPI, Streamlit, Self-Hosted Inference, Docker, AWS GPU Instances \\
+
+\textbf{Models Worked With} &
+Mistral-7B-Instruct, Llama-3.1-8B-Instruct, Meta-Llama-3-8B, Qwen2.5-3B-Instruct \\
+
+\textbf{LLM Evaluation} &
+MT-Bench, XSum, SQuAD-v2, BERTScore, ROUGE, Exact-Match / F1, Length-Controlled LLM-as-Judge, Non-Inferiority Testing, Ablation Studies, Deterministic \& Reproducible Benchmarking \\
+
+\textbf{Efficiency \& Systems} &
+Token-Cost Reduction, TTFT \& Inter-Token Latency Profiling, GPU Energy Measurement (NVML), KV-Cache-Free Methods, Quantised Fine-Tuning (4-bit) \\
+
+\textbf{Programming} &
+Python, SQL, C++, C\#, JavaScript, Bash, Git/GitHub, Linux \\
+\end{tabularx}
+
+%% -- PROJECTS ----------------------------------------------------------------
+\cvsection{Selected LLM Research \& Engineering Projects}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/minimal-lm}{Verbosity-Aware Decoding for Token-Efficient Language Model Inference}}
+          {MSc Research Project (CISC 898), Queen's University \textperiodcentered\ Supervisor: Dr.\ Rahatara Ferdousi}
+          {2026 -- Present}
+\begin{cvitems}
+  \item Designed a \textbf{training-free LogitsProcessor} that reduces generated tokens at \textbf{decoding time} by fusing stop-token, n-gram-repetition and semantic-redundancy signals under an \textbf{entropy-driven gate} --- no retraining, no architecture change, no KV-cache or attention overhead, and drop-in compatible with Hugging Face \texttt{generate}.
+  \item Validated across \textbf{three open-weight model families} (Mistral-7B-Instruct, Llama-3.1-8B-Instruct, Qwen2.5-3B-Instruct) on \textbf{MT-Bench, YapBench, XSum} and \textbf{SQuAD-v2}, covering open-ended chat, summarisation and extractive QA.
+  \item Built a \textbf{pre-registered evaluation protocol} that proves semantic preservation via paired \textbf{non-inferiority testing} (BERTScore, ROUGE, exact-match/F1, length-controlled LLM judge) alongside token reduction, \textbf{TTFT / inter-token latency} and \textbf{GPU energy} through NVML --- fully deterministic and reproducible on pinned AWS GPU instances.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/Horus-OSINT}{Horus-OSINT --- Domain-Adapted LLM Assistant on AWS}}
+          {Meta-Llama-3-8B \textperiodcentered\ Instruction Fine-Tuning \textperiodcentered\ AWS \textperiodcentered\ Python}
+          {2026}
+\begin{cvitems}
+  \item Fine-tuned \textbf{Meta-Llama-3-8B} on \textbf{159,826} curated GTD/GDELT records, building the full pipeline from dataset construction and instruction formatting through training to evaluation.
+  \item Deployed the adapted model on \textbf{AWS} as an interactive assistant that answers natural-language questions over global event and threat-intelligence data.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/horus-sentinel}{HORUS Sentinel --- Multi-Agent LLM Platform over a Knowledge Graph}}
+          {Multi-Agent Systems \textperiodcentered\ Fine-Tuned LLM \textperiodcentered\ Knowledge Graphs \textperiodcentered\ Self-Hosted Inference}
+          {2026}
+\begin{cvitems}
+  \item Architected a swarm of specialised agents that continuously collect open-source data and correlate every finding into a \textbf{living knowledge graph} used as the retrieval substrate for generation.
+  \item A \textbf{self-hosted, fine-tuned language model} reasons over that graph to produce \textbf{prioritised, evidence-backed reports}, grounding every claim in retrieved source material.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/Automated-Multimodal-Agent-PDF-to-Narrated-PowerPoint}{Automated Multimodal Agent --- PDF to Narrated Presentation}}
+          {Generative AI \textperiodcentered\ Agentic Orchestration \textperiodcentered\ Multimodal Generation}
+          {2026}
+\begin{cvitems}
+  \item Built an autonomous think--plan--act workflow that converts PDFs into fully narrated PowerPoint decks by chaining document understanding, structured slide generation and audio synthesis.
+\end{cvitems}
+
+\vspace{3pt}
+{\bfseries\color{navy}Additional Relevant Work}
+\begin{cvitems}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/Analyzing-Review-Effort-in-Human-vs.-Agentic-Pull-Requests}{Human vs.\ Agentic Pull Requests}}{reproducible GitHub-mining study quantifying review effort and failure modes of LLM-generated versus human-authored code.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/SimCLR-Vision-SSL}{SimCLR-Vision-SSL}}{contrastive representation learning with \textbf{ONNX/FAISS} embedding retrieval --- transferable to RAG vector-search pipelines.}
+\end{cvitems}
+
+%% -- WORK EXPERIENCE ---------------------------------------------------------
+\cvsection{Professional Experience}
+
+\cventry{Machine Learning Instructor}{National Telecommunication Institute (NTI)}
+        {Jul 2025 -- Sep 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Delivered a \textbf{90-hour} hands-on ML program covering supervised learning, PCA and neural networks with practical labs throughout.
+\end{cvitems}
+
+\cventry{AI in Cybersecurity Intern}{e\& Egypt --- via NTI (On-the-Job Training)}
+        {Jun 2025 -- Jul 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Applied AI-driven tooling across threat intelligence, digital forensics and enterprise security analysis.
+\end{cvitems}
+
+\cventry{Systems Engineer (Military Service)}{National Company for Roads Building \& Development}
+        {Feb 2024 -- Mar 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Supported backend systems for national toll infrastructure serving \textbf{50\%+ of Egyptian vehicles}; co-developed an internal data-management application in \textbf{C\#, .NET, SQL Server}.
+\end{cvitems}
+
+\cventry{Online Instructor --- AI, Algorithms \& Data Science}{Udemy \& YouTube}
+        {2020 -- Present}{Remote}
+\begin{cvitems}
+  \item Built Arabic-language technical curricula reaching \textbf{10,000+ learners} and \textbf{700K+ YouTube views}.
+\end{cvitems}
+
+%% -- CERTIFICATIONS ----------------------------------------------------------
+\cvsection{Certifications \& Awards}
+
+\begin{dualcol}
+  \textbf{Generative AI \& Prompt Engineering} --- IBM / Coursera &
+  \textbf{AWS Academy} --- ML for NLP, ML Foundations, Data Engineering \\[2pt]
+  \textbf{Machine Learning Specialization} --- DeepLearning.AI &
+  \textbf{HCIP -- AI} (Huawei) \\[2pt]
+  \textbf{Digilians Presidential Scholarship} --- Queen's University &
+  \textbf{Semi-Finalist} --- Microsoft Imagine Cup 2023 \\[2pt]
+  \textbf{1st Place} --- Smart Cities Hackathon 2022 &
+  \textbf{Ideal Student Award} --- Assiut University, 2022--2023 \\
+\end{dualcol}
+
+%% -- LANGUAGES ---------------------------------------------------------------
+\cvsection{Languages}
+
+\begin{cvitems}
+  \item \textbf{Arabic:} Native \textperiodcentered\ \textbf{English:} Professional Working Proficiency \textperiodcentered\ \textbf{French:} Basic.
+\end{cvitems}
+
+\vspace{3pt}
+{\color{navy}\rule{\linewidth}{0.8pt}}
+
+\end{document}

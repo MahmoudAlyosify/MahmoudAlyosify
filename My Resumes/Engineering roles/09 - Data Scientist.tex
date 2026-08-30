@@ -1,0 +1,278 @@
+%% ============================================================
+%%  Mahmoud Alyosify - Targeted CV 2026
+%%  Compiler : XeLaTeX
+%%  Uses Arial if installed, otherwise falls back automatically
+%%  to TeX Gyre Heros (metric-compatible Helvetica clone).
+%% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+% -- Packages -----------------------------------------------------------------
+\usepackage[a4paper, top=9mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Icons are optional: the CV still compiles (and stays ATS-readable) without them.
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{%
+  \newcommand{\faEnvelope}{}\newcommand{\faPhone}{}\newcommand{\faMapMarker}{}%
+  \newcommand{\faLinkedin}{}\newcommand{\faGithub}{}\newcommand{\faRobot}{}%
+  \newcommand{\faChartBar}{}\newcommand{\faGlobe}{}%
+}
+
+% -- Fonts --------------------------------------------------------------------
+% Common f-ligatures are disabled: they extract as single glyphs and break
+% keyword matching in ATS parsers.
+\defaultfontfeatures{Ligatures={TeX,NoCommon}}
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}\setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}%
+}
+
+% -- Colours ------------------------------------------------------------------
+\definecolor{navy}{HTML}{0D2137}
+\definecolor{teal}{HTML}{0A7E8C}
+\definecolor{darkgray}{HTML}{2C2C2C}
+\definecolor{midgray}{HTML}{555555}
+
+% -- Hyperlinks + PDF metadata (indexed by many ATS parsers) ------------------
+\hypersetup{
+  colorlinks  = true,
+  urlcolor    = teal,
+  linkcolor   = teal,
+  pdftitle    = {Mahmoud Alyosify - Data Scientist - CV},
+  pdfauthor   = {Mahmoud Alyosify},
+  pdfsubject  = {Curriculum Vitae},
+  pdfkeywords = {Data Scientist, Data Analyst, Predictive Modelling, Statistics,
+                 Hypothesis Testing, A/B Testing, Feature Engineering, XGBoost,
+                 LightGBM, Scikit-learn, SHAP, Optuna, Pandas, NumPy, PySpark,
+                 SQL, ETL, Power BI, Data Visualization, R, Python,
+                 Machine Learning, Experimentation, Business Analytics},
+  pdflang     = {en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+% -- Building blocks ----------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\color{navy}\rule{\linewidth}{1.1pt}}\\[0.5pt]%
+  {\color{navy}\bfseries\fontsize{9.5}{11}\selectfont\uppercase{#1}}\\[-4pt]%
+  {\color{teal}\rule{\linewidth}{0.6pt}}%
+  \vspace{2pt}%
+}
+
+% {Role or Degree}{Organisation}{Dates}{Location / detail}
+\newcommand{\cventry}[4]{%
+  \vspace{2.5pt}%
+  \textbf{\color{darkgray}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}} \hfill {\color{midgray}#4}%
+}
+
+% {Project title}{Context / tech stack}{Dates}
+\newcommand{\cvproject}[3]{%
+  \vspace{2.5pt}%
+  {\bfseries\color{navy}#1} \hfill {\color{midgray}\textit{#3}}\\[-1.5pt]%
+  {\color{teal}\textit{#2}}%
+}
+
+% Compact one-line project entry (used inside a cvitems list)
+\newcommand{\cvmini}[2]{\item {\bfseries\color{navy}#1} --- #2}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=11pt, itemsep=0.5pt, parsep=0pt, topsep=1pt,
+                  label={\textcolor{teal}{$\bullet$}}]
+}{%
+  \end{itemize}%
+}
+
+\newenvironment{dualcol}{%
+  \begin{tabular*}{\linewidth}{@{}p{0.495\linewidth}@{\hspace{0.01\linewidth}}p{0.495\linewidth}@{}}
+}{%
+  \end{tabular*}%
+}
+
+%% ============================================================
+\begin{document}
+\small
+
+%% -- HEADER ------------------------------------------------------------------
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{3pt}
+\begin{center}
+  {\fontsize{21}{24}\bfseries\color{navy} Mahmoud Alyosify}\\[3pt]
+  {\fontsize{10}{12}\color{teal}
+    Specialised Data Scientist \enspace|\enspace Predictive Modelling, Experimentation \& Decision Analytics
+    \enspace|\enspace MSc Artificial Intelligence, Queen's University (Canada)
+}\\[4pt]
+  {\color{midgray}
+    \faEnvelope\ \href{mailto:mahmoud.alyosify@gmail.com}{mahmoud.alyosify@gmail.com}
+    \enspace|\enspace
+    \faPhone\ +20 114 555 7959
+    \enspace|\enspace
+    \faMapMarker\ New Cairo, Egypt \textperiodcentered\ Open to Relocation}\\[2pt]
+  {\faLinkedin\ \href{https://linkedin.com/in/mahmoudalyosify}{linkedin.com/in/mahmoudalyosify}
+    \enspace|\enspace
+    \faGithub\ \href{https://github.com/MahmoudAlyosify}{github.com/MahmoudAlyosify}
+    \enspace|\enspace
+    \faGlobe\ \href{https://mahmoudalyosifysite.github.io/}{Portfolio}
+    \enspace|\enspace
+    \faRobot\ \href{https://huggingface.co/mahmoudalyosify}{Hugging Face}
+    \enspace|\enspace
+    \faChartBar\ \href{https://kaggle.com/mahmoudalyosify}{Kaggle}}
+\end{center}
+
+{\color{navy}\rule{\linewidth}{1.5pt}}
+
+\vspace{2pt}
+
+%% -- SUMMARY -----------------------------------------------------------------
+\cvsection{Professional Summary}
+
+{\color{darkgray}\justifying
+Data Scientist who builds models around the \textbf{decision they have to support}, not around the leaderboard. Built a satellite collision-risk model deliberately restricted to data available \textbf{48+ hours} before closest approach --- matching the real operational window --- and a reproducible \textbf{repository-mining study} answering a measurable question about engineering effort. Strong statistical foundation: five years teaching \textbf{probability, statistics, discrete mathematics and graph data mining} to \textbf{10,000+ learners}, and research-grade experimentation including \textbf{paired non-inferiority testing} and controlled ablation sweeps. Completing an \textbf{MSc in Artificial Intelligence at Queen's University, Canada} (expected \textbf{Nov 2026}) on a \textbf{Digilians Presidential Scholarship}. \textbf{Microsoft Certified: Data Analyst Associate}.}
+
+%% -- EDUCATION ---------------------------------------------------------------
+\cvsection{Education}
+
+\cventry{MSc in Artificial Intelligence}{Queen's University, Kingston, Ontario, Canada}
+        {Sep 2025 -- Nov 2026}{Expected Nov 2026}
+\begin{cvitems}
+  \item \textbf{Digilians Presidential Scholarship} --- competitive national AI graduate fellowship.
+  \item Coursework: \textbf{Deep Learning, Large Language Models, Reinforcement Learning, Cloud Computing, End-to-End ML Pipelines}.
+\end{cvitems}
+
+\cventry{B.Sc.\ Computer \& Information Science (Bioinformatics)}{Assiut University, Egypt}
+        {Sep 2019 -- Jul 2023}{GPA: 3.53 / 4.00}
+\begin{cvitems}
+  \item Quantitative foundation in statistics, probability, discrete mathematics, data analysis and bioinformatics.
+  \item Graduation Project: \href{https://vitalismsolution.github.io/}{\textbf{Vitalism Solution}} --- \textbf{Grade A+}; \textbf{Semi-Finalist, Microsoft Imagine Cup 2023}.
+\end{cvitems}
+
+%% -- TECHNICAL SKILLS --------------------------------------------------------
+\cvsection{Technical Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\hyphenpenalty=10000\arraybackslash}p{35mm} X@{}}
+\textbf{Statistics \& Experimentation} &
+Probability \& Statistical Inference, Hypothesis Testing, Paired Non-Inferiority Testing, Controlled Experiments \& Ablation Design, Class-Imbalance Handling, Cross-Validation, Error Analysis, Reproducible Analysis \\
+
+\textbf{Modelling} &
+Scikit-learn, XGBoost, LightGBM, Logistic \& Linear Models, Feature Engineering, Hyperparameter Optimisation (Optuna), Model Explainability (SHAP), Deep Learning (PyTorch, TensorFlow) \\
+
+\textbf{Data Engineering} &
+SQL, Pandas, NumPy, PySpark, ETL Pipelines, Data Cleaning \& Validation, Repository \& API Data Mining, MySQL, MongoDB, SQL Server \\
+
+\textbf{Analytics \& Reporting} &
+Power BI (\textit{Microsoft Certified: Data Analyst Associate}), Matplotlib, Streamlit Dashboards, Crystal Reports, Executive-Ready Insight Communication \\
+
+\textbf{Deployment} &
+AWS, Docker, FastAPI, ONNX, Git/GitHub, Linux, CI/CD \\
+
+\textbf{Programming} &
+Python, SQL, R, C++, C\#, MATLAB, Bash \\
+\end{tabularx}
+
+%% -- PROJECTS ----------------------------------------------------------------
+\cvsection{Selected Data Science Projects}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/SCRAP-Satellite-Collision-Risk-Assessment-and-Prediction}{SCRAP --- Satellite Collision Risk Assessment \& Prediction}}
+          {Python \textperiodcentered\ Scikit-learn \textperiodcentered\ Feature Engineering \textperiodcentered\ Imbalanced Classification}
+          {2026}
+\begin{cvitems}
+  \item Built a supervised risk model constrained to conjunction data available \textbf{48+ hours} before closest approach --- deliberately trading offline accuracy for a prediction that arrives in time to act on.
+  \item Engineered features from raw conjunction records and handled a severely imbalanced target, selecting evaluation metrics appropriate to rare, high-consequence events rather than headline accuracy.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/Analyzing-Review-Effort-in-Human-vs.-Agentic-Pull-Requests}{Analyzing Review Effort: Human vs.\ Agentic Pull Requests}}
+          {Data Mining \textperiodcentered\ Statistical Analysis \textperiodcentered\ Reproducible Pipelines}
+          {2026}
+\begin{cvitems}
+  \item Built an end-to-end \textbf{GitHub-mining pipeline} --- collection, cleaning, cohort definition and analysis --- to quantify whether AI-generated pull requests shift reviewer effort compared with human-authored ones.
+  \item Defined comparable cohorts and explicit inclusion criteria so the comparison measured the intended effect rather than sampling artefacts.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/SimCLR-Vision-SSL}{SimCLR-Vision-SSL --- Controlled 42-Experiment Study}}
+          {PyTorch \textperiodcentered\ Experimental Design \textperiodcentered\ Ablation Analysis}
+          {2026}
+\begin{cvitems}
+  \item Designed and executed a \textbf{42-experiment sweep} isolating which augmentations drive representation quality, reaching \textbf{84.30\% top-1 accuracy} --- a controlled study rather than a single tuned run.
+\end{cvitems}
+
+\cvproject{\href{https://github.com/MahmoudAlyosify/minimal-lm}{Verbosity-Aware Decoding --- Research-Grade Evaluation Design}}
+          {MSc Research Project (CISC 898), Queen's University \textperiodcentered\ Statistical Testing}
+          {2026 -- Present}
+\begin{cvitems}
+  \item Built a \textbf{pre-registered evaluation protocol} using \textbf{paired non-inferiority testing} to prove a cost reduction did not degrade quality --- the statistically correct framing for "no worse than", which a standard significance test cannot answer.
+\end{cvitems}
+
+\vspace{3pt}
+{\bfseries\color{navy}Additional Projects}
+\begin{cvitems}
+  \cvmini{ATM Transaction Analysis}{exploratory data analysis and statistical reporting on transaction data in \textbf{R}.}
+  \cvmini{Diabetes Onset Prediction}{supervised classification pipeline on clinical risk-factor data.}
+  \cvmini{\href{https://github.com/MahmoudAlyosify/Horus-OSINT}{Horus-OSINT}}{curated \textbf{159,826} GTD/GDELT records into a training corpus and deployed a fine-tuned model on AWS for natural-language querying of global event data.}
+  \item \textbf{Also:} RL-Cloud-Autoscaler (PPO/DQN cost optimisation) \textperiodcentered\ AudioShield \textperiodcentered\ HORUS Sentinel \textperiodcentered\ Vitalism Solution.
+\end{cvitems}
+
+%% -- WORK EXPERIENCE ---------------------------------------------------------
+\cvsection{Professional Experience}
+
+\cventry{Machine Learning Instructor}{National Telecommunication Institute (NTI)}
+        {Jul 2025 -- Sep 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Delivered a \textbf{90-hour} hands-on program covering supervised learning, \textbf{PCA} and neural networks, guiding students through complete analyses on real datasets.
+\end{cvitems}
+
+\cventry{Systems Engineer (Military Service)}{National Company for Roads Building \& Development}
+        {Feb 2024 -- Mar 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Supported backend data systems for national toll infrastructure serving \textbf{50\%+ of Egyptian vehicles} across \textbf{70\%+ of national roads}.
+  \item Co-developed an internal \textbf{data-management and reporting} application in \textbf{C\#, .NET, Entity Framework, SQL Server} and \textbf{Crystal Reports}, delivering operational reporting across multiple departments.
+\end{cvitems}
+
+\cventry{Online Instructor --- Statistics, Probability \& Data Science}{Udemy \& YouTube}
+        {2020 -- Present}{Remote}
+\begin{cvitems}
+  \item Authored and taught Arabic-language courses in \textbf{probability, statistics, discrete mathematics, algorithms and graph data mining} for \textbf{10,000+ learners} (\textbf{700K+ views}).
+\end{cvitems}
+
+\cventry{AI in Cybersecurity Intern}{e\& Egypt --- via NTI (On-the-Job Training)}
+        {Jun 2025 -- Jul 2025}{Cairo, Egypt}
+\begin{cvitems}
+  \item Applied AI-driven analytical tooling across threat intelligence, digital forensics and enterprise security analysis.
+\end{cvitems}
+
+%% -- CERTIFICATIONS ----------------------------------------------------------
+\cvsection{Certifications \& Awards}
+
+\begin{dualcol}
+  \textbf{Microsoft Certified: Data Analyst Associate} (Power BI) &
+  \textbf{AWS Academy} --- Data Engineering, ML Foundations, ML for NLP \\[2pt]
+  \textbf{Machine Learning Specialization} --- DeepLearning.AI &
+  \textbf{Data Analysis in R} --- 57357 Children's Cancer Hospital \\[2pt]
+  \textbf{HCIP -- AI} (Huawei) &
+  \textbf{ML Internship} --- ITIDA / Egypt Makes Electronics (200 hrs) \\[2pt]
+  \textbf{1st Place} --- Smart Cities Hackathon 2022 &
+  \textbf{Semi-Finalist} --- Microsoft Imagine Cup 2023 \\
+\end{dualcol}
+
+%% -- LANGUAGES ---------------------------------------------------------------
+\cvsection{Languages}
+
+\begin{cvitems}
+  \item \textbf{Arabic:} Native \textperiodcentered\ \textbf{English:} Professional Working Proficiency \textperiodcentered\ \textbf{French:} Basic.
+\end{cvitems}
+
+\vspace{3pt}
+{\color{navy}\rule{\linewidth}{0.8pt}}
+
+\end{document}
